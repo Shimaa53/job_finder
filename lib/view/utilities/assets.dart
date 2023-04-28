@@ -51,6 +51,7 @@ static const String uiDesigner = 'assets/images/ui_designer.png';
   static const String welcomesearch= 'assets/images/welcome_search.png';
   static const String gojek= 'assets/images/gojek.png';
   static const String noMessage= 'assets/images/noMessage.png';
+  static const String profile= 'assets/images/profile.png';
 
 
 }

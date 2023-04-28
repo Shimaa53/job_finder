@@ -14,8 +14,8 @@ class DefaultText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(text,style: TextStyle(
-        fontSize: fontSize,
-        color: color,
+      fontSize: fontSize,
+      color: color,
       fontWeight: fontWeight,
       height: height,
     )

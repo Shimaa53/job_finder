@@ -6,15 +6,15 @@ import '../../utilities/assets.dart';
 import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
 import '../../utilities/routes.dart';
-import '../../widgets/default_formfield.dart';
-import '../../widgets/default_text.dart';
-import '../../widgets/main_button.dart';
+import '../../widgets/custom_widget/default_formfield.dart';
+import '../../widgets/custom_widget/default_text.dart';
+import '../../widgets/custom_widget/main_button.dart';
 
 class ResetPassword extends StatelessWidget {
-   ResetPassword({Key? key}) : super(key: key);
+  ResetPassword({Key? key}) : super(key: key);
   TextEditingController emailController=TextEditingController();
-   final formKey=GlobalKey<FormState>();
-   @override
+  final formKey=GlobalKey<FormState>();
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -94,7 +94,7 @@ class ResetPassword extends StatelessWidget {
 
 
                 ],
-      ),
+              ),
             ),
           )),
 

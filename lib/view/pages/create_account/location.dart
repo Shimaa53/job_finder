@@ -6,8 +6,8 @@ import 'package:sizer/sizer.dart';
 import '../../utilities/app_string.dart';
 import '../../utilities/color.dart';
 import '../../utilities/routes.dart';
-import '../../widgets/default_text.dart';
-import '../../widgets/main_button.dart';
+import '../../widgets/custom_widget/default_text.dart';
+import '../../widgets/custom_widget/main_button.dart';
 
 class Location extends StatelessWidget {
   const Location({Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class Location extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 6.w),
             child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               SizedBox(
                 height: 4.h,
               ),
@@ -47,9 +47,9 @@ class Location extends StatelessWidget {
                     height: 37,
                     padding: EdgeInsets.all(10.5),
                     decoration: BoxDecoration(
-                      color: AppColor.white1,
-                      borderRadius: BorderRadius.circular(90),
-                      border: Border.all(color: AppColor.white2)
+                        color: AppColor.white1,
+                        borderRadius: BorderRadius.circular(90),
+                        border: Border.all(color: AppColor.white2)
                     ),
                     child: Row(
                       children: [
@@ -61,9 +61,9 @@ class Location extends StatelessWidget {
                   )
                 ],
               ),
-                  SizedBox(
-                    height: 6.h,
-                  ),
+              SizedBox(
+                height: 6.h,
+              ),
               MainButton(
                 text: AppString.next,
                 onTap: () {

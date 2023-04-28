@@ -7,7 +7,7 @@ import '../../utilities/assets.dart';
 import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
 import '../../utilities/routes.dart';
-import '../../widgets/default_text.dart';
+import '../../widgets/custom_widget/default_text.dart';
 
 class NotificationScreen extends StatelessWidget {
   const NotificationScreen({Key? key}) : super(key: key);

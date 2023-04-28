@@ -28,6 +28,11 @@ class AppIcons{
   static const Icon send=Icon(Icons.send_outlined);
   static const Icon archive=Icon(Icons.archive_outlined);
   static const Icon delete=Icon(Icons.delete_outline_outlined);
+  static const Icon exit=Icon(Icons.exit_to_app_outlined,color: AppColor.danger,);
+  static const Icon arrowForward=Icon(Icons.arrow_forward);
+  static const Icon language=Icon(Icons.language_outlined);
+  static const Icon security=Icon(Icons.lock_outline_rounded);
+  //static const Icon security=Icon(Icons.lock_outline_rounded);
 
 
 

@@ -2,14 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:jop_finder/view/utilities/assets.dart';
 import 'package:jop_finder/view/utilities/color.dart';
-import 'package:jop_finder/view/widgets/save_job_widget.dart';
+import 'package:jop_finder/view/widgets/saved_widget/save_job_widget.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../model/select_job_model.dart';
 import '../../utilities/app_string.dart';
 import '../../utilities/icon.dart';
 import '../../utilities/routes.dart';
-import '../../widgets/default_text.dart';
+import '../../widgets/custom_widget/default_text.dart';
 
 class SavedScreen extends StatelessWidget {
    SavedScreen({Key? key}) : super(key: key);

@@ -21,6 +21,7 @@ class AppRoutes{
   static const String notificationPageRoute ="NotificationScreen";
   static const String messagePageRoute ="MessageScreen";
   static const String chatPageRoute ="ChatScreen";
+  static const String profilePageRoute ="ProfileScreen";
 
 
 }

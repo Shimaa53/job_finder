@@ -3,10 +3,10 @@ import 'package:jop_finder/model/select_job_model.dart';
 import 'package:jop_finder/view/utilities/color.dart';
 import 'package:sizer/sizer.dart';
 
-import '../pages/saved/saved_screen.dart';
-import '../utilities/app_string.dart';
-import '../utilities/icon.dart';
-import '../widgets/default_text.dart';
+import '../../utilities/app_string.dart';
+import '../../utilities/icon.dart';
+import '../custom_widget/default_text.dart';
+
 Widget SaveSheet(BuildContext context)=>Container(
     height:MediaQuery.of(context).size.height*.4,
     width: double.infinity,

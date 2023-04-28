@@ -3,9 +3,9 @@ import 'package:jop_finder/view/utilities/app_string.dart';
 import 'package:jop_finder/view/utilities/color.dart';
 import 'package:jop_finder/view/utilities/icon.dart';
 import 'package:jop_finder/view/utilities/routes.dart';
-import 'package:jop_finder/view/widgets/default_formfield.dart';
-import 'package:jop_finder/view/widgets/default_text.dart';
-import 'package:jop_finder/view/widgets/main_button.dart';
+import 'package:jop_finder/view/widgets/custom_widget/default_formfield.dart';
+import 'package:jop_finder/view/widgets/custom_widget/default_text.dart';
+import 'package:jop_finder/view/widgets/custom_widget/main_button.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../utilities/assets.dart';
@@ -75,16 +75,16 @@ class LoginScreen extends StatelessWidget {
 
                         ),
                         SizedBox(height: 1.h,),
-                       Row(
-                         mainAxisAlignment: MainAxisAlignment.end,
-                         children: [
-                           TextButton(onPressed: (){
-                             Navigator.pushNamed(context, AppRoutes.resetPasswordPageRoute);
-                           },
-                               child: DefaultText(text: AppString.forgetPassword,color:AppColor.blue ,))
-                         ],
-                       ),
-                       SizedBox(height: 10.7.h),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            TextButton(onPressed: (){
+                              Navigator.pushNamed(context, AppRoutes.resetPasswordPageRoute);
+                            },
+                                child: DefaultText(text: AppString.forgetPassword,color:AppColor.blue ,))
+                          ],
+                        ),
+                        SizedBox(height: 10.7.h),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -177,4 +177,3 @@ class LoginScreen extends StatelessWidget {
 
   }
 }
-

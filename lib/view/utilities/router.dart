@@ -22,6 +22,7 @@ import '../pages/apply_job/data_successfully.dart';
 import '../pages/home/select_job.dart';
 import '../pages/messages/conversation.dart';
 import '../pages/messages/message_screen.dart';
+import '../pages/profile/profile_screen.dart';
 import '../pages/saved/notification_screen.dart';
 import '../pages/saved/saved_screen.dart';
 
@@ -150,6 +151,13 @@ case AppRoutes.messagePageRoute:
 case AppRoutes.chatPageRoute:
       return MaterialPageRoute(
         builder: (_) =>  ChatScreen(),
+        settings: routeSettings,
+      );
+
+
+case AppRoutes.profilePageRoute:
+      return MaterialPageRoute(
+        builder: (_) =>  ProfileScreen(),
         settings: routeSettings,
       );
 

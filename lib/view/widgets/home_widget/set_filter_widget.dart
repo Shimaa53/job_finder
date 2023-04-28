@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:jop_finder/model/select_job_model.dart';
 import 'package:sizer/sizer.dart';
 
-import '../utilities/app_string.dart';
-import '../utilities/assets.dart';
-import '../utilities/color.dart';
-import '../utilities/icon.dart';
-import 'default_formfield.dart';
-import 'default_text.dart';
-import 'main_button.dart';
+import '../../utilities/app_string.dart';
+import '../../utilities/assets.dart';
+import '../../utilities/color.dart';
+import '../../utilities/icon.dart';
+import '../custom_widget/default_formfield.dart';
+import '../custom_widget/default_text.dart';
+import '../custom_widget/main_button.dart';
 
 Widget BuildSetFilter(BuildContext context)=> Container(
   height:MediaQuery.of(context).size.height*0.96,

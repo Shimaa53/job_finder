@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../model/employee_model.dart';
-import '../utilities/app_string.dart';
-import '../utilities/assets.dart';
-import '../utilities/color.dart';
-import '../utilities/icon.dart';
-import 'default_text.dart';
+import '../../../model/employee_model.dart';
+import '../../utilities/app_string.dart';
+import '../../utilities/assets.dart';
+import '../../utilities/color.dart';
+import '../../utilities/icon.dart';
+import '../custom_widget/default_text.dart';
 
-Widget Employee(EmployeeModel employee)=>Row(
+Widget employee(EmployeeModel employee)=>Row(
   children: [
     Image.asset(employee.image,height: 5.h,width: 9.5.w,),
     SizedBox(width: 2.w,),

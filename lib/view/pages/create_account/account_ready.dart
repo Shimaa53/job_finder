@@ -6,8 +6,8 @@ import 'package:sizer/sizer.dart';
 import '../../utilities/app_string.dart';
 import '../../utilities/color.dart';
 import '../../utilities/routes.dart';
-import '../../widgets/default_text.dart';
-import '../../widgets/main_button.dart';
+import '../../widgets/custom_widget/default_text.dart';
+import '../../widgets/custom_widget/main_button.dart';
 
 class AccountReady extends StatelessWidget {
   const AccountReady({Key? key}) : super(key: key);

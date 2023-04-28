@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-import '../utilities/app_string.dart';
-import '../utilities/color.dart';
-import '../utilities/icon.dart';
-import '../widgets/default_text.dart';
+import '../../utilities/app_string.dart';
+import '../../utilities/color.dart';
+import '../../utilities/icon.dart';
+import '../custom_widget/default_text.dart';
 
-Widget MessageSheet(BuildContext context)=>Container(
+Widget messageSheet(BuildContext context)=>Container(
     height:MediaQuery.of(context).size.height*.4,
     width: double.infinity,
     decoration: BoxDecoration(

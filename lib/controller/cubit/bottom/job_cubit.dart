@@ -1,18 +1,22 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:jop_finder/view/pages/apply_job/job_apply.dart';
 import 'package:jop_finder/view/pages/create_account/account_ready.dart';
 import 'package:jop_finder/view/pages/create_account/register_screen.dart';
 import 'package:jop_finder/view/pages/create_account/type_work.dart';
 import 'package:jop_finder/view/pages/home/home_screen.dart';
+import 'package:jop_finder/view/pages/saved/saved_screen.dart';
 import 'package:jop_finder/view/utilities/app_string.dart';
 import 'package:jop_finder/view/utilities/icon.dart';
+
+import '../../../view/pages/messages/message_screen.dart';
 
 part 'job_state.dart';
 
 class JobCubit extends Cubit<JobState> {
   JobCubit() : super(JobInitial());
- static JobCubit get(context)=>BlocProvider.of(context);
+  static JobCubit get(context)=>BlocProvider.of(context);
 
   int currentIndex=0;
 
@@ -27,9 +31,11 @@ class JobCubit extends Cubit<JobState> {
 
   List<Widget>screens=[
     HomeScreen(),
-    RegisterScreen(),
-    AccountReady(),
-    TypeWork()
+    MessageScreen(),
+    ApplyJob(),
+    SavedScreen(),
+    SavedScreen(),
+
   ];
 
   void changeIndex(int index){
@@ -38,7 +44,7 @@ class JobCubit extends Cubit<JobState> {
   }
 
   //
- static List<String>recentSearch=[
+  static List<String>recentSearch=[
     AppString.juniorUiDesign,
     AppString.juniorUxDesign,
     AppString.productDesign,

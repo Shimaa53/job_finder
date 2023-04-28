@@ -256,7 +256,28 @@ class AppString{
   static const String mute ='Mute';
   static const String archive ='Archive';
   static const String deleteConversation ='Delete conversation';
-  //static const String yesterday ='Shoope';
+  static const String name ='Rafif Dian Axelingga';
+  static const String n46 ='46';
+  static const String n23 ='23';
+  static const String n16 ='16';
+  static const String reviewed ='Reviewed';
+  static const String contacted ='Contacted';
+  static const String about ='About';
+  static const String edit ='Edit';
+  static const String general ='General';
+  static const String aboutMe ='I\'m Rafif Dian Axelingga, I’m UI/UX Designer, I have experience designing UI Design for approximately 1 year. I am currently joining the Vektora studio team based in Surakarta, Indonesia.I am a person who has a high spirit and likes to work to achieve what I dream of.';
+  static const String editProfile ='Edit Profile';
+  static const String portfolioP ='Portfolio';
+  static const String language ='Language';
+  static const String security ='Login and security';
+  static const String others ='Others';
+  static const String accessibility ='Accessibility';
+  static const String helpCenter ='Help Center';
+  static const String terms ='Terms & Conditions';
+  static const String privacy  ='Privacy Policy';
+  //static const String edit ='Edit';
+
+
 
 
 

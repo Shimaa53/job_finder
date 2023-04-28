@@ -1,21 +1,17 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:jop_finder/controller/cubit/bottom/job_cubit.dart';
 import 'package:jop_finder/view/utilities/app_string.dart';
 import 'package:jop_finder/view/utilities/assets.dart';
 import 'package:jop_finder/view/utilities/color.dart';
 import 'package:jop_finder/view/utilities/icon.dart';
-import 'package:jop_finder/view/widgets/company_widget.dart';
-import 'package:jop_finder/view/widgets/default_text.dart';
-import 'package:jop_finder/view/widgets/description_widget.dart';
-import 'package:jop_finder/view/widgets/people_widget.dart';
+import 'package:jop_finder/view/widgets/custom_widget/default_text.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../utilities/routes.dart';
-import '../../widgets/main_button.dart';
+import '../../widgets/custom_widget/main_button.dart';
 
 class DataSuccessfully extends StatelessWidget {
+  const DataSuccessfully({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +46,7 @@ class DataSuccessfully extends StatelessWidget {
           DefaultText(text:AppString.tex2IndataSuccess
             ,color: AppColor.grey1,height: 1.4,
           ),
-          Spacer(),
+          const Spacer(),
           MainButton(
               text: AppString.backHome,
               onTap: () {

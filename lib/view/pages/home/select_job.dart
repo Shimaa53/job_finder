@@ -7,11 +7,11 @@ import '../../utilities/app_string.dart';
 import '../../utilities/assets.dart';
 import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
-import '../../widgets/default_formfield.dart';
-import '../../widgets/default_text.dart';
-import '../../widgets/main_button.dart';
-import '../../widgets/select_job_widget.dart';
-import '../../widgets/set_filter_widget.dart';
+import '../../widgets/custom_widget/default_formfield.dart';
+import '../../widgets/custom_widget/default_text.dart';
+import '../../widgets/custom_widget/main_button.dart';
+import '../../widgets/home_widget/select_job_widget.dart';
+import '../../widgets/home_widget/set_filter_widget.dart';
 
 class SelectJob extends StatelessWidget {
    SelectJob({Key? key}) : super(key: key);
@@ -161,7 +161,7 @@ class SelectJob extends StatelessWidget {
             child: Padding(
               padding:  EdgeInsets.only(left: 6.w,right: 6.w,top: 2.h),
               child:ListView.separated(
-                  itemBuilder:(context, index) =>  BuildSelectJob(SelectJobModel.selectJob[index]),
+                  itemBuilder:(context, index) =>  buildSelectJob(SelectJobModel.selectJob[index]),
                   separatorBuilder: (context,index)=>Divider(thickness: 2,),
                   itemCount: SelectJobModel.selectJob.length)
             )

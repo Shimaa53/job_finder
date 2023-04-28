@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:jop_finder/view/utilities/assets.dart';
 import 'package:jop_finder/view/utilities/icon.dart';
@@ -7,13 +6,14 @@ import 'package:sizer/sizer.dart';
 import '../../../model/chat_model.dart';
 import '../../utilities/app_string.dart';
 import '../../utilities/color.dart';
-import '../../widgets/conversation_sheet.dart';
-import '../../widgets/default_formfield.dart';
-import '../../widgets/default_text.dart';
+import '../../widgets/message_widget/conversation_sheet.dart';
+import '../../widgets/custom_widget/default_formfield.dart';
+import '../../widgets/custom_widget/default_text.dart';
 
 class ChatScreen extends StatelessWidget {
-   ChatScreen({Key? key}) : super(key: key);
   var scaffoldKey=GlobalKey<ScaffoldState>();
+
+  ChatScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class ChatScreen extends StatelessWidget {
                     SizedBox(
                       width: 1.w,
                     ),
-                    CircleAvatar(
+                    const CircleAvatar(
                       backgroundImage: AssetImage(AppAssets.twitter),
                       radius: 18,
                     ),
@@ -52,11 +52,11 @@ class ChatScreen extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                       color: AppColor.darkBlue,
                     ),
-                    Spacer(),
+                    const Spacer(),
                     IconButton(
                         onPressed: () {
                           scaffoldKey.currentState!.showBottomSheet((context)=>
-                          ConversationSheet(context));
+                          conversationSheet(context));
                         },
                         icon: AppIcons.more),
 
@@ -64,27 +64,26 @@ class ChatScreen extends StatelessWidget {
                 ),
               ),
             ),
-           // Padding(
-           //   padding: const EdgeInsets.all(10),
-           //   child: ListView.builder(itemBuilder: (context, index) {
-           //     return Align(
-           //         alignment: (ChatModel.chat[index].messagetype=="receiver"?Alignment.topLeft:Alignment.topRight),
-           //         child: Padding(
-           //           padding: EdgeInsets.only(bottom:10),
-           //           child: Container(
-           //             padding: EdgeInsets.only(left: 14,right: 14,top: 10,bottom:10),
-           //             decoration: BoxDecoration(
-           //                 borderRadius: BorderRadius.circular(20),
-           //                 color: (ChatModel.chat[index].messagetype=="receiver"?Colors.grey:Colors.blue)
-           //             ),
-           //             child: Text(ChatModel.chat[index].messageContent),
-           //
-           //           ),
-           //         ));
-           //   } ,
-           //     itemCount:ChatModel.chat.length,
-           //   ),
-           // ),
+        Expanded(
+          child: ListView.builder(
+            itemBuilder: (context, index) =>
+              Align(
+                alignment: (ChatModel.chat[index].messagetype=="receiver"?Alignment.topLeft:Alignment.topRight),
+                child: Padding(
+                padding: EdgeInsets.only(bottom:2.h),
+                child: Container(
+                    padding: EdgeInsets.only(left: 3.3.w,right: 3.3.w,top: 1.8.h,bottom:1.8.h),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: (ChatModel.chat[index].messagetype=="receiver"?Colors.grey:Colors.blue),                    ),
+                    child: Text(ChatModel.chat[index].messageContent)
+
+                )),
+              ),
+            itemCount: ChatModel.chat.length,
+          ),
+        ),
+
            Spacer(),
            Container(
              height: 12.h,
@@ -97,17 +96,17 @@ class ChatScreen extends StatelessWidget {
                    backgroundColor: AppColor.lightGrey,
                    child: CircleAvatar(
                      radius: 23,
+                     backgroundColor:AppColor.white0,
                      child:IconButton(
                        onPressed: (){},
                        icon: AppIcons.send,
                        color: AppColor.darkBlue,
 
                      ),
-                     backgroundColor:AppColor.white0,
 
                    ),
                  ),
-                 SizedBox(width: 15,),
+                 const SizedBox(width: 15,),
                  Expanded(
                    child: DefaultFormField(
                      hintText: AppString.writeMsg,
@@ -123,12 +122,12 @@ class ChatScreen extends StatelessWidget {
                    backgroundColor: AppColor.lightGrey,
                    child: CircleAvatar(
                      radius: 23,
+                     backgroundColor:AppColor.white0,
                      child:IconButton(
                        onPressed: (){},
                        icon: AppIcons.micro,
                        color: AppColor.darkBlue,
                      ),
-                     backgroundColor:AppColor.white0,
 
                    ),
                  ),

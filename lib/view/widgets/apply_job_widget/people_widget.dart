@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../model/employee_model.dart';
-import '../utilities/app_string.dart';
-import '../utilities/assets.dart';
-import '../utilities/color.dart';
-import '../utilities/icon.dart';
-import 'default_text.dart';
+import '../../../model/employee_model.dart';
+import '../../utilities/app_string.dart';
+import '../../utilities/assets.dart';
+import '../../utilities/color.dart';
+import '../../utilities/icon.dart';
+import '../custom_widget/default_text.dart';
 import 'employee_widget.dart';
 
-Widget People()=>Column(
+Widget people()=>Column(
   crossAxisAlignment: CrossAxisAlignment.start,
   children: [
     SizedBox(height: 3.h,),
@@ -90,7 +90,7 @@ Widget People()=>Column(
     ),
     Expanded(
       child: ListView.separated(
-          itemBuilder: (context, index) =>Employee(EmployeeModel.emp[index]) ,
+          itemBuilder: (context, index) =>employee(EmployeeModel.emp[index]) ,
           separatorBuilder:(context, index) => Divider(thickness: 2,),
           itemCount: EmployeeModel.emp.length),
     )

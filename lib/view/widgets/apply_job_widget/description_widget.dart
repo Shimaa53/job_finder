@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:sizer/sizer.dart';
 
-import '../utilities/app_string.dart';
-import '../utilities/color.dart';
-import 'default_text.dart';
+import '../../utilities/app_string.dart';
+import '../../utilities/color.dart';
+import '../custom_widget/default_text.dart';
 
-Widget Discription()=>Column(
+Widget description()=>Column(
   crossAxisAlignment: CrossAxisAlignment.start,
   children: [
     SizedBox(height: 3.h,),

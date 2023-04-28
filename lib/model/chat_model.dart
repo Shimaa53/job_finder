@@ -1,4 +1,6 @@
 
+import 'package:jop_finder/view/utilities/app_string.dart';
+
 class ChatModel{
   String messageContent;
   String messagetype;
@@ -6,11 +8,11 @@ class ChatModel{
 
 
   static List<ChatModel>chat=[
-    ChatModel(messageContent: 'Hello', messagetype: 'receiver'),
-    ChatModel(messageContent: 'How are you', messagetype: 'receiver'),
-    ChatModel(messageContent: 'fine', messagetype: 'sender'),
-    ChatModel(messageContent: 'lets play', messagetype: 'receiver'),
-    ChatModel(messageContent: 'yalla', messagetype: 'sender'),
+    ChatModel(messageContent: AppString.recieve1, messagetype: 'receiver'),
+    ChatModel(messageContent:  AppString.send1, messagetype: 'sender'),
+    ChatModel(messageContent:  AppString.recieve2, messagetype: 'receiver'),
+    ChatModel(messageContent:  AppString.send2, messagetype: 'sender'),
+    ChatModel(messageContent:  AppString.recieve3, messagetype: 'receiver'),
 
   ];
 }

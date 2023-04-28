@@ -2,13 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:jop_finder/controller/cubit/bottom/job_cubit.dart';
 import 'package:jop_finder/view/utilities/color.dart';
-import 'package:jop_finder/view/widgets/default_text.dart';
+import 'package:jop_finder/view/widgets/custom_widget/default_text.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../utilities/app_string.dart';
 import '../../utilities/icon.dart';
 import '../../utilities/routes.dart';
-import '../../widgets/default_formfield.dart';
+import '../../widgets/custom_widget/default_formfield.dart';
 
 class SearchScreen extends StatelessWidget {
    SearchScreen({Key? key}) : super(key: key);
