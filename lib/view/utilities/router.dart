@@ -22,7 +22,12 @@ import '../pages/apply_job/data_successfully.dart';
 import '../pages/home/select_job.dart';
 import '../pages/messages/conversation.dart';
 import '../pages/messages/message_screen.dart';
+import '../pages/profile/edit_profile.dart';
+import '../pages/profile/language.dart';
+import '../pages/profile/notification_profile.dart';
+import '../pages/profile/portfolio.dart';
 import '../pages/profile/profile_screen.dart';
+import '../pages/profile/security.dart';
 import '../pages/saved/notification_screen.dart';
 import '../pages/saved/saved_screen.dart';
 
@@ -162,7 +167,43 @@ case AppRoutes.profilePageRoute:
       );
 
 
-    case AppRoutes.homePageRoute:
+ case AppRoutes.editPageRoute:
+      return MaterialPageRoute(
+        builder: (_) =>  EditScreen(),
+        settings: routeSettings,
+      );
+
+
+    case AppRoutes.portfolioPageRoute:
+      return MaterialPageRoute(
+        builder: (_) =>  Portfolio(),
+        settings: routeSettings,
+      );
+
+
+
+    case AppRoutes.languagePageRoute:
+      return MaterialPageRoute(
+        builder: (_) =>  Language(),
+        settings: routeSettings,
+      );
+
+
+ case AppRoutes.notificationProfilePageRoute:
+      return MaterialPageRoute(
+        builder: (_) =>  NotificationProfile(),
+        settings: routeSettings,
+      );
+
+
+ case AppRoutes.securityPageRoute:
+      return MaterialPageRoute(
+        builder: (_) =>  Security(),
+        settings: routeSettings,
+      );
+
+
+   case AppRoutes.homePageRoute:
   default: return MaterialPageRoute(
   builder: (_) =>  HomeScreen(),
   settings: routeSettings,

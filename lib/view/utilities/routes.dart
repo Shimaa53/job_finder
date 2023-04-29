@@ -22,6 +22,11 @@ class AppRoutes{
   static const String messagePageRoute ="MessageScreen";
   static const String chatPageRoute ="ChatScreen";
   static const String profilePageRoute ="ProfileScreen";
+  static const String editPageRoute ="EditScreen";
+  static const String portfolioPageRoute ="Portfolio";
+  static const String languagePageRoute ="Language";
+  static const String notificationProfilePageRoute ="NotificationProfile";
+  static const String securityPageRoute ="Security";
 
 
 }
