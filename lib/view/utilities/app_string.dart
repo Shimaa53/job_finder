@@ -186,7 +186,6 @@ class AppString{
   static const String upLoadPortFolio ='Upload portfolio';
   static const String fillBio ='Fill in your bio data correctly';
   static const String fullName ='Full Name';
-  static const String noHandphone ='No.Handphone';
   static const String cv ='CV.pdf';
   static const String portfolio ='Portfolio.pdf';
   static const String graphicDesigner ='Graphic Designer';
@@ -256,7 +255,7 @@ class AppString{
   static const String mute ='Mute';
   static const String archive ='Archive';
   static const String deleteConversation ='Delete conversation';
-  static const String name ='Rafif Dian Axelingga';
+  static const String myName ='Rafif Dian Axelingga';
   static const String n46 ='46';
   static const String n23 ='23';
   static const String n16 ='16';
@@ -275,7 +274,34 @@ class AppString{
   static const String helpCenter ='Help Center';
   static const String terms ='Terms & Conditions';
   static const String privacy  ='Privacy Policy';
-  //static const String edit ='Edit';
+  static const String changePhoto ='Change  Photo';
+  static const String addressEdit ='Ranjingan, Wangon, Wasington City';
+  static const String numMobile ='0100-666-7234';
+  static const String save ='Save';
+  static const String addPortfolio ='Add portfolio here';
+  static const String jobNotification ='Job notification';
+  static const String searchAlert ='Your Job Search Alert';
+  static const String jobAppUpdate ='Job Application Update';
+  static const String jobAppReminder ='Job Application Reminders';
+  static const String jobInterested ='Jobs You May Be Interested In';
+  static const String jobSeeker ='Job Seeker Updates';
+  static const String otherNotification ='Other notification';
+  static const String showProfile ='Show Profile';
+  static const String allMessage ='All Message';
+  static const String messageNudges ='Message Nudges';
+  static const String accountAccess ='Accont access';
+  static const String emailAddress ='Email address';
+  static const String myEmail ='rafifdian12@gmail.com';
+  static const String phoneNumber ='Phone number';
+  static const String changePassword ='Change password';
+  static const String stepsVerification ='Two-step verification';
+  static const String faceID ='Face ID';
+  static const String nonActive ='Non active';
+  static const String bio ='Bio';
+  static const String address ='Address';
+  static const String noHandPhone ='No.Handphone';
+  static const String name0 ='Name';
+
 
 
 

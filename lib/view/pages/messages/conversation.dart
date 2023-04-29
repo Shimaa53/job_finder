@@ -111,7 +111,7 @@ class ChatScreen extends StatelessWidget {
                    child: DefaultFormField(
                      hintText: AppString.writeMsg,
                      radius: 90,
-                     isdense: true,
+                     isDense: true,
 
 
                    ),

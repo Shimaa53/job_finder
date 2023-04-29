@@ -71,7 +71,7 @@ class ProfileScreen extends StatelessWidget {
                child: Column(
                children:[
                  SizedBox(height: 6.5.h,),
-                 DefaultText(text:AppString.name,fontSize: 13.sp,
+                 DefaultText(text:AppString.myName,fontSize: 13.sp,
                       fontWeight: FontWeight.w500,
                       color: AppColor.darkBlue,
                     ),

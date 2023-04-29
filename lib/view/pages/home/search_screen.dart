@@ -43,7 +43,7 @@ class SearchScreen extends StatelessWidget {
                          prefixIcon:AppIcons.search,
                          hintText: AppString.searchSomeThing,
                          radius: 90,
-                         isdense: true,
+                         isDense: true,
 
 
                        ),

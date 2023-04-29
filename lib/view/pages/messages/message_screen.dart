@@ -74,7 +74,7 @@ class MessageScreen extends StatelessWidget {
                     prefixIcon:AppIcons.search,
                     hintText: AppString.searchMsg,
                     radius: 90,
-                    isdense: true,
+                    isDense: true,
 
 
                   ),

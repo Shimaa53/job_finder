@@ -32,7 +32,7 @@ class AppIcons{
   static const Icon arrowForward=Icon(Icons.arrow_forward);
   static const Icon language=Icon(Icons.language_outlined);
   static const Icon security=Icon(Icons.lock_outline_rounded);
-  //static const Icon security=Icon(Icons.lock_outline_rounded);
+  static const Icon camera=Icon(Icons.camera_alt_outlined);
 
 
 

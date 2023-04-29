@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:jop_finder/view/utilities/color.dart';
 
 class DefaultFormField extends StatelessWidget {
   final Widget?prefixIcon;
@@ -15,7 +13,11 @@ class DefaultFormField extends StatelessWidget {
   final TextInputType? keyboardType;
   final void Function(String)? onChanged;
   final VoidCallback? onTap;
-  final bool? isdense;
+  final bool? isDense;
+  final Color?color;
+  final double?fontSize;
+  final FontWeight fontWeight;
+
 
 
 
@@ -30,9 +32,12 @@ class DefaultFormField extends StatelessWidget {
   this.validator,
   this.keyboardType,
   this.onChanged,
-  this.isdense,
+  this.isDense,
   this.onTap,
   this.width,
+  this.color,
+  this.fontSize,
+  this.fontWeight=FontWeight.normal
   });
   @override
   Widget build(BuildContext context) {
@@ -49,7 +54,12 @@ class DefaultFormField extends StatelessWidget {
           prefixIcon: prefixIcon,
           suffixIcon: suffixIcon,
           hintText: hintText,
-          isDense: isdense,
+          hintStyle: TextStyle(
+            color: color,
+            fontSize: fontSize,
+            fontWeight: fontWeight,
+          ),
+          isDense: isDense,
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(radius),
           ),
         ),

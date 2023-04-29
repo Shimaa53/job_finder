@@ -62,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                       prefixIcon:AppIcons.search,
                       hintText: AppString.search,
                       radius: 90,
-                      isdense: true,
+                      isDense: true,
                       onTap: (){
                         Navigator.pushNamed(context, AppRoutes.searchPageRoute,);
                       },

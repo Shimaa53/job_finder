@@ -49,7 +49,7 @@ class SelectJob extends StatelessWidget {
                             prefixIcon:AppIcons.search,
                             hintText: AppString.searchSomeThing,
                             radius: 90,
-                            isdense: true,
+                            isDense: true,
                             suffixIcon:IconButton(onPressed: (){}, icon: AppIcons.cancel,iconSize: 23,color: AppColor.darkGrey,),
 
 
