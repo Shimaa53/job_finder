@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/pages/complete_profile/education.dart';
+import 'package:job_finder/view/pages/complete_profile/experience.dart';
 import 'package:job_finder/view/pages/profile/change_password.dart';
 import 'package:job_finder/view/pages/profile/email_address.dart';
 import 'package:job_finder/view/pages/profile/help.dart';
@@ -10,6 +12,7 @@ import 'package:job_finder/view/utilities/routes.dart';
 import '../pages/apply_job/job_apply.dart';
 import '../pages/apply_job/job_details.dart';
 import '../pages/boarding/boarding_screen.dart';
+import '../pages/complete_profile/complete_profile.dart';
 import '../pages/create_account/account_ready.dart';
 import '../pages/create_account/location.dart';
 import '../pages/create_account/register_screen.dart';
@@ -254,6 +257,27 @@ case AppRoutes.profilePageRoute:
  case AppRoutes.privacyPageRoute:
       return MaterialPageRoute(
         builder: (_) =>  PrivacyScreen(),
+        settings: routeSettings,
+      );
+
+
+ case AppRoutes.completeProfilePageRoute:
+      return MaterialPageRoute(
+        builder: (_) =>  CompleteProfile(),
+        settings: routeSettings,
+      );
+
+
+ case AppRoutes.educationPageRoute:
+      return MaterialPageRoute(
+        builder: (_) =>  Education(),
+        settings: routeSettings,
+      );
+
+
+ case AppRoutes.experiencePageRoute:
+      return MaterialPageRoute(
+        builder: (_) =>  Experience(),
         settings: routeSettings,
       );
 

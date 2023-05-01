@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 
- buildSizedBox({double? height,double? width}) {
+ buildSizedBox({double? height,double? width,Widget? child}) {
    return SizedBox(
     height:height ,
      width: width,
+     child:child ,
   );
 }
 

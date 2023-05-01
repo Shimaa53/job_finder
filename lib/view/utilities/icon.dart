@@ -34,6 +34,8 @@ class AppIcons{
   static const Icon language=Icon(Icons.language_outlined);
   static const Icon camera=Icon(Icons.camera_alt_outlined);
   static const Icon phone=Icon(Icons.phone_android_outlined);
+  static const Icon checkCircle=Icon(Icons.check_circle);
+  static const Icon note=Icon(Icons.event_note);
 
 
 

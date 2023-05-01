@@ -336,6 +336,30 @@ class AppString{
   static const String whatCanWeHelp ='What can we help?';
   static const String loremSit ='Lorem ipsum dolor sit amet';
   static const String loremSitDetails ='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultricies mi enim, quis vulputate nibh faucibus at. Maecenas est ante, suscipit vel sem non, blandit blandit erat. Praesent pulvinar ante et felis porta vulputate. Curabitur ornare velit nec fringilla finibus. Phasellus mollis pharetra ante, in ullamcorper massa ullamcorper et. Curabitur ac leo sit amet leo interdum mattis vel eu mauris.';
+  static const String completeProfile ='Complete Profile';
+  static const String completedRate ='2/4 Completed';
+  static const String completeBefore ='Complete your profile before applying for a job';
+  static const String personalDetails ='Personal Details';
+  static const String detailsPersonal ='Full name, email, phone number, and your address';
+  static const String education ='Education';
+  static const String educationHistory ='Enter your educational history to be considered by the recruiter';
+  static const String experience ='Experience';
+  static const String workExperience ='Enter your work experience to be considered by the recruiter';
+  static const String createPortfolio ='Create your portfolio. Applying for various types of jobs is easier.';
+  static const String university ='University *';
+  static const String title ='Title';
+  static const String startYear ='Start Year';
+  static const String endYear ='End Year';
+  static const String universityOf ='The University of Arizona';
+  static const String bachelorOfArt ='Bachelor of Art and Design';
+  static const String yearOfEducation ='2012 - 2015';
+  static const String position ='Position *';
+  static const String companyName ='Company name *';
+  static const String currentlyIn ='I am currently working in this role';
+  static const String growUp ='GrowUp Studio';
+  static const String yearOfExperience ='2019 - 2022';
+  static const String startYearExp ='Start Year *';
+
 
 
 

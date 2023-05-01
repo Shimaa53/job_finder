@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
               )
           ),
           onGenerateRoute: onGenerate,
-          initialRoute: AppRoutes.profilePageRoute,
+          initialRoute: AppRoutes.completeProfilePageRoute,
         ),
       );}
     );

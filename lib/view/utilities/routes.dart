@@ -34,6 +34,9 @@ class AppRoutes{
   static const String helpPageRoute ="HelpScreen";
   static const String termsPageRoute ="TermsScreen";
   static const String privacyPageRoute ="PrivacyScreen";
+  static const String completeProfilePageRoute ="CompleteProfile";
+  static const String educationPageRoute ="Education";
+  static const String experiencePageRoute ="Experience";
 
 
 }
