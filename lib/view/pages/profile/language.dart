@@ -6,9 +6,21 @@ import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
 import '../../widgets/custom_widget/default_text.dart';
 
-class Language extends StatelessWidget {
+class Language extends StatefulWidget {
   const Language({Key? key}) : super(key: key);
 
+  @override
+  State<Language> createState() => _LanguageState();
+}
+
+class _LanguageState extends State<Language> {
+  String selectedLanguage='English';
+  List<String>languages=["English","Arabic","french","spanish"];
+  void onLanguageSelected(String language){
+    setState(() {
+      selectedLanguage=language;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,6 +41,18 @@ class Language extends StatelessWidget {
           color: AppColor.darkBlue,
         ),
       ),
+      body: ListView.builder(
+        itemCount: languages.length,
+          itemBuilder: (context, index) {
+          final language=languages[index];
+            return ListTile(
+              title: Text(language),
+              trailing: selectedLanguage!=language ?Icon(Icons.check):null,
+              onTap: (){
+                onLanguageSelected(language);
+              },
+            );
+          }),
 
     );
   }

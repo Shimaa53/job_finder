@@ -1,16 +1,12 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:jop_finder/view/pages/apply_job/job_apply.dart';
-import 'package:jop_finder/view/pages/create_account/account_ready.dart';
-import 'package:jop_finder/view/pages/create_account/register_screen.dart';
-import 'package:jop_finder/view/pages/create_account/type_work.dart';
-import 'package:jop_finder/view/pages/home/home_screen.dart';
-import 'package:jop_finder/view/pages/saved/saved_screen.dart';
-import 'package:jop_finder/view/utilities/app_string.dart';
-import 'package:jop_finder/view/utilities/icon.dart';
-
+import '../../../view/pages/apply_job/job_apply.dart';
+import '../../../view/pages/home/home_screen.dart';
 import '../../../view/pages/messages/message_screen.dart';
+import '../../../view/pages/saved/saved_screen.dart';
+import '../../../view/utilities/app_string.dart';
+import '../../../view/utilities/icon.dart';
 
 part 'job_state.dart';
 
@@ -60,4 +56,41 @@ class JobCubit extends Cubit<JobState> {
     AppString.uxDesigner,
     AppString.FEDevelper
   ];
+
+
+  static List<String>jobNotification=[
+    AppString.searchAlert,
+    AppString.jobAppUpdate,
+    AppString.jobAppReminder,
+    AppString.jobInterested,
+    AppString.jobSeeker
+  ];
+
+  static List<String>otherNotification=[
+    AppString.showProfile,
+    AppString.allMessage,
+    AppString.messageNudges,
+  ];
+
+  static List<String>accountAccess=[
+    AppString.emailAddress,
+    AppString.phoneNumber,
+    AppString.changePassword,
+    AppString.stepsVerification,
+    AppString.faceID
+  ];
+
+  // void onChangedSwitch(bool value){
+  //   bool searchAlert=true;
+  //   bool appUpdate=true;
+  //   bool appReminder=false;
+  //   bool jobInterested=true;
+  //   bool jobSeeker=false;
+  //   bool showProfile=true;
+  //   bool allMessage=true;
+  //   bool messageNudges=true;
+  //
+  //   emit(ChangeSwitch());
+  // }
+
 }

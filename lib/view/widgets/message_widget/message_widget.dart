@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:jop_finder/model/message_model.dart';
-import 'package:jop_finder/view/utilities/routes.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../model/message_model.dart';
 import '../../utilities/color.dart';
+import '../../utilities/routes.dart';
 import '../custom_widget/default_text.dart';
 Widget buildMessage(MessageModel msg,BuildContext context)=>InkWell(
   onTap: (){

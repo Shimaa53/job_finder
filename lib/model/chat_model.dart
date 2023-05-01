@@ -1,5 +1,6 @@
 
-import 'package:jop_finder/view/utilities/app_string.dart';
+
+import '../view/utilities/app_string.dart';
 
 class ChatModel{
   String messageContent;

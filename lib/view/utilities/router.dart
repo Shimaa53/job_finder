@@ -1,31 +1,37 @@
 
 import 'package:flutter/material.dart';
-import 'package:jop_finder/view/pages/forget_password/New_password_screen.dart';
-import 'package:jop_finder/view/pages/home/bottom_Screen.dart';
-import 'package:jop_finder/view/pages/home/home_screen.dart';
-import 'package:jop_finder/view/pages/home/search_screen.dart';
-import 'package:jop_finder/view/pages/login/login_screen.dart';
-import 'package:jop_finder/view/pages/create_account/register_screen.dart';
-import 'package:jop_finder/view/pages/forget_password/reset_password_screen.dart';
-import 'package:jop_finder/view/utilities/routes.dart';
-
+import 'package:job_finder/view/pages/profile/change_password.dart';
+import 'package:job_finder/view/pages/profile/email_address.dart';
+import 'package:job_finder/view/pages/profile/help.dart';
+import 'package:job_finder/view/pages/profile/phone_number.dart';
+import 'package:job_finder/view/pages/profile/terms.dart';
+import 'package:job_finder/view/pages/profile/verification.dart';
+import 'package:job_finder/view/utilities/routes.dart';
 import '../pages/apply_job/job_apply.dart';
 import '../pages/apply_job/job_details.dart';
 import '../pages/boarding/boarding_screen.dart';
 import '../pages/create_account/account_ready.dart';
 import '../pages/create_account/location.dart';
+import '../pages/create_account/register_screen.dart';
 import '../pages/create_account/type_work.dart';
+import '../pages/forget_password/New_password_screen.dart';
 import '../pages/forget_password/check_email_screen.dart';
 import '../pages/forget_password/password_success.dart';
 import '../pages/boarding/splash_screen.dart';
 import '../pages/apply_job/data_successfully.dart';
+import '../pages/forget_password/reset_password_screen.dart';
+import '../pages/home/bottom_Screen.dart';
+import '../pages/home/home_screen.dart';
+import '../pages/home/search_screen.dart';
 import '../pages/home/select_job.dart';
+import '../pages/login/login_screen.dart';
 import '../pages/messages/conversation.dart';
 import '../pages/messages/message_screen.dart';
 import '../pages/profile/edit_profile.dart';
 import '../pages/profile/language.dart';
 import '../pages/profile/notification_profile.dart';
 import '../pages/profile/portfolio.dart';
+import '../pages/profile/privacy.dart';
 import '../pages/profile/profile_screen.dart';
 import '../pages/profile/security.dart';
 import '../pages/saved/notification_screen.dart';
@@ -199,6 +205,55 @@ case AppRoutes.profilePageRoute:
  case AppRoutes.securityPageRoute:
       return MaterialPageRoute(
         builder: (_) =>  Security(),
+        settings: routeSettings,
+      );
+
+
+ case AppRoutes.emailAddressPageRoute:
+      return MaterialPageRoute(
+        builder: (_) =>  EmailAddress(),
+        settings: routeSettings,
+      );
+
+
+ case AppRoutes.phoneNumberPageRoute:
+      return MaterialPageRoute(
+        builder: (_) =>  PhoneNumber(),
+        settings: routeSettings,
+      );
+
+
+ case AppRoutes.changePasswordPageRoute:
+      return MaterialPageRoute(
+        builder: (_) =>  ChangePassword(),
+        settings: routeSettings,
+      );
+
+
+ case AppRoutes.verificationPageRoute:
+      return MaterialPageRoute(
+        builder: (_) =>  Verification(),
+        settings: routeSettings,
+      );
+
+
+ case AppRoutes.helpPageRoute:
+      return MaterialPageRoute(
+        builder: (_) =>  HelpScreen(),
+        settings: routeSettings,
+      );
+
+
+ case AppRoutes.termsPageRoute:
+      return MaterialPageRoute(
+        builder: (_) =>  TermsScreen(),
+        settings: routeSettings,
+      );
+
+
+ case AppRoutes.privacyPageRoute:
+      return MaterialPageRoute(
+        builder: (_) =>  PrivacyScreen(),
         settings: routeSettings,
       );
 

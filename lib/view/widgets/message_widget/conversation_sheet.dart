@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:jop_finder/model/message_model.dart';
-import 'package:jop_finder/view/utilities/assets.dart';
-import 'package:jop_finder/view/widgets/message_widget/message_widget.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../utilities/app_string.dart';

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:jop_finder/model/profile_model.dart';
-import 'package:jop_finder/view/utilities/routes.dart';
-import 'package:jop_finder/view/widgets/profile_widget/profile_widget.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../model/profile_model.dart';
 import '../../utilities/app_string.dart';
 import '../../utilities/assets.dart';
 import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
+import '../../utilities/routes.dart';
 import '../../widgets/custom_widget/default_text.dart';
+import '../../widgets/profile_widget/profile_widget.dart';
 
 class ProfileScreen extends StatelessWidget {
    ProfileScreen({Key? key}) : super(key: key);
@@ -210,28 +210,42 @@ class ProfileScreen extends StatelessWidget {
              child: Padding(
                  padding:  EdgeInsets.symmetric(horizontal: 6.w,vertical: 1.h),
                  child: ListView.separated(
-                     itemBuilder: (context, index) =>Column(
-                       children: [
-                         SizedBox(height: 1.3.h,),
-                         Row(
+                     itemBuilder: (context, index) =>InkWell(
+                       onTap: (){
+                         if (index == 1) {
+                                Navigator.pushNamed(
+                                    context, AppRoutes.helpPageRoute);
+                              } else if (index == 2) {
+                                Navigator.pushNamed(
+                                    context, AppRoutes.termsPageRoute);
+                              } else if (index == 3) {
+                                Navigator.pushNamed(
+                                    context, AppRoutes.privacyPageRoute);
+                              }
+                            },
+                       child: Column(
+                         children: [
+                           SizedBox(height: 1.3.h,),
+                           Row(
 
-                           children: [
+                             children: [
 
-                             DefaultText(text:other[index],fontSize: 11.sp,
+                               DefaultText(text:other[index],fontSize: 11.sp,
 
-                             color: AppColor.darkBlue,
+                               color: AppColor.darkBlue,
 
-                             ),
+                               ),
 
-                             Spacer(),
+                               Spacer(),
 
-                             AppIcons.arrowForward
+                               AppIcons.arrowForward
 
-                           ],
+                             ],
 
-                         ),
-                         SizedBox(height: 1.3.h,),
-                       ],
+                           ),
+                           SizedBox(height: 1.3.h,),
+                         ],
+                       ),
                      ),
 
                      separatorBuilder: (context,index)=>Divider(),

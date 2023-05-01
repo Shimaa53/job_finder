@@ -1,5 +1,6 @@
-import 'package:jop_finder/view/utilities/app_string.dart';
-import 'package:jop_finder/view/utilities/assets.dart';
+
+import '../view/utilities/app_string.dart';
+import '../view/utilities/assets.dart';
 
 class SuggestJobModel{
   final String image;

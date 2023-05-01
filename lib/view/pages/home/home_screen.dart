@@ -1,18 +1,16 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:jop_finder/model/recent_job.dart';
-import 'package:jop_finder/model/suggest_job.dart';
-import 'package:jop_finder/view/utilities/routes.dart';
-import 'package:jop_finder/view/widgets/custom_widget/default_text.dart';
-import 'package:jop_finder/view/widgets/home_widget/recent_job_widget.dart';
-
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import '../../../model/recent_job.dart';
+import '../../../model/suggest_job.dart';
 import '../../utilities/app_string.dart';
 import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../utilities/routes.dart';
 import '../../widgets/custom_widget/default_formfield.dart';
+import '../../widgets/custom_widget/default_text.dart';
+import '../../widgets/home_widget/recent_job_widget.dart';
 import '../../widgets/home_widget/suggest_job_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -42,7 +40,7 @@ class HomeScreen extends StatelessWidget {
                               DefaultText(text:AppString.text2InHome,)
                             ]
                         ),
-                        Spacer(),
+                        buildSpacer(),
                         CircleAvatar(
                             radius: 23,
                             backgroundColor: AppColor.white,

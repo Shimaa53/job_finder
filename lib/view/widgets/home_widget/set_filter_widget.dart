@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:jop_finder/model/select_job_model.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../utilities/app_string.dart';
-import '../../utilities/assets.dart';
 import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
 import '../custom_widget/default_formfield.dart';

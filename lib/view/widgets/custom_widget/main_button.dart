@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:jop_finder/view/widgets/custom_widget/default_text.dart';
 import 'package:sizer/sizer.dart';
+
+import 'default_text.dart';
 
 class MainButton extends StatelessWidget {
   final double height;
@@ -19,7 +20,7 @@ class MainButton extends StatelessWidget {
       width: width,
       child:ElevatedButton(
           style: ElevatedButton.styleFrom(
-            primary: colorBox,
+            backgroundColor: colorBox,
             shape:const StadiumBorder(),
           ),
           onPressed: onTap,

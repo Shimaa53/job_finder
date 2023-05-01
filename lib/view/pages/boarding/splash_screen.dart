@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:jop_finder/view/pages/boarding/boarding_screen.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../utilities/assets.dart';

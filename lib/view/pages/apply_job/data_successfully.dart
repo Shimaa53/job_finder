@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:jop_finder/view/utilities/app_string.dart';
-import 'package:jop_finder/view/utilities/assets.dart';
-import 'package:jop_finder/view/utilities/color.dart';
-import 'package:jop_finder/view/utilities/icon.dart';
-import 'package:jop_finder/view/widgets/custom_widget/default_text.dart';
 import 'package:sizer/sizer.dart';
-
+import '../../utilities/app_string.dart';
+import '../../utilities/assets.dart';
+import '../../utilities/color.dart';
+import '../../utilities/icon.dart';
 import '../../utilities/routes.dart';
+import '../../widgets/custom_widget/default_text.dart';
 import '../../widgets/custom_widget/main_button.dart';
 
 class DataSuccessfully extends StatelessWidget {

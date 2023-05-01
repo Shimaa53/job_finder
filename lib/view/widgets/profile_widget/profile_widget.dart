@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:jop_finder/model/profile_model.dart';
-import 'package:jop_finder/view/utilities/routes.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../model/profile_model.dart';
 import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
 import '../custom_widget/default_text.dart';

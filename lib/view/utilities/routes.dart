@@ -27,6 +27,13 @@ class AppRoutes{
   static const String languagePageRoute ="Language";
   static const String notificationProfilePageRoute ="NotificationProfile";
   static const String securityPageRoute ="Security";
+  static const String emailAddressPageRoute ="EmailAddress";
+  static const String phoneNumberPageRoute ="PhoneNumber";
+  static const String changePasswordPageRoute ="ChangePassword";
+  static const String verificationPageRoute ="Verification";
+  static const String helpPageRoute ="HelpScreen";
+  static const String termsPageRoute ="TermsScreen";
+  static const String privacyPageRoute ="PrivacyScreen";
 
 
 }

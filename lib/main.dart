@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:jop_finder/view/pages/boarding/boarding_screen.dart';
-import 'package:jop_finder/view/pages/create_account/register_screen.dart';
-import 'package:jop_finder/view/pages/boarding/splash_screen.dart';
-import 'package:jop_finder/view/utilities/router.dart';
-import 'package:jop_finder/view/utilities/routes.dart';
+import 'package:job_finder/view/utilities/router.dart';
+import 'package:job_finder/view/utilities/routes.dart';
 import 'package:sizer/sizer.dart';
-
 import 'controller/cubit/bottom/job_cubit.dart';
 
 void main() {
@@ -32,6 +28,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
               bottomNavigationBarTheme: BottomNavigationBarThemeData(
                   type: BottomNavigationBarType.fixed,
+
                   elevation: 20.0
               )
           ),

@@ -5,3 +5,4 @@ abstract class JobState {}
 
 class JobInitial extends JobState {}
 class ChangeBottomNavigation extends JobState {}
+class ChangeSwitch extends JobState {}

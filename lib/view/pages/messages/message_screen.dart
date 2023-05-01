@@ -1,16 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:jop_finder/model/message_model.dart';
-import 'package:jop_finder/view/utilities/assets.dart';
-import 'package:jop_finder/view/widgets/message_widget/message_widget.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../model/message_model.dart';
 import '../../utilities/app_string.dart';
 import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
 import '../../widgets/custom_widget/default_formfield.dart';
 import '../../widgets/custom_widget/default_text.dart';
 import '../../widgets/message_widget/message_sheet.dart';
+import '../../widgets/message_widget/message_widget.dart';
 
 class MessageScreen extends StatelessWidget {
    MessageScreen({Key? key}) : super(key: key);

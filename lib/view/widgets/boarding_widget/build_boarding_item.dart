@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:jop_finder/model/boarding_model.dart';
-import 'package:jop_finder/view/utilities/color.dart';
 import 'package:sizer/sizer.dart';
+import '../../../model/boarding_model.dart';
+import '../../utilities/color.dart';
 import '../custom_widget/default_text.dart';
 
 Widget BuildBordingItem(BoardingModel buildBoardingItem){

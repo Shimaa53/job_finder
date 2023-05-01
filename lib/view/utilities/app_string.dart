@@ -301,7 +301,41 @@ class AppString{
   static const String address ='Address';
   static const String noHandPhone ='No.Handphone';
   static const String name0 ='Name';
-
+  static const String mainEmail ='Main e-mail address';
+  static const String mainPhone ='Main phone number';
+  static const String enterOldPassword ='Enter your old password';
+  static const String enterNewPassword ='Enter your new password';
+  static const String confirmNewPassword ='Confirm your new password';
+  static const String usePhoneToResetPass ='Use the phone number to reset your password';
+  static const String secureAccount ='Secure your account with two-step verification';
+  static const String askForVerificationCode ='Two-step verification provides additional security by asking for a verification code every time you log in on another device.';
+  static const String phoneOrAuth ='Adding a phone number or using an authenticator will help keep your account safe from harm.';
+  static const String selectVerificationMethod ='Select a verification method';
+  static const String smsPhone ='Telephone number (SMS)';
+  static const String note ='Note : Turning this feature will sign you out anywhere you’re currently signed in. We will then require you to enter a verification code the first time you sign with a new device or Joby mobile application.';
+  static const String addPhoneNumber ='Add phone number';
+  static const String sendVerificationCode ='We will send a verification code to this number';
+  static const String enterYourPassword ='Enter your password';
+  static const String sendCode ='Send Code';
+  static const String enter6Digital ='Enter the 6 digit code';
+  static const String confirmAccount ='Please confirm your account by entering the authorization code sen to ****-****-7234';
+  static const String resendCode ='Resend code 42s';
+  static const String verify ='Verify';
+  static const String privacyImportant ='Your privacy is important';
+  static const String importantInPrivacy ='''Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel augue sit amet est molestie viverra. Nunc quis bibendum orci. Donec feugiat massa mi, at hendrerit mauris rutrum at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel augue sit amet est molestie viverra. Nunc quis bibendum orci. Donec feugiat massa mi, at hendrerit mauris rutrum at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel augue sit amet est molestie viverra. Nunc quis bibendum orci. Donec feugiat massa mi, at hendrerit mauris rutrum at. 
+  
+  Nam vel augue sit amet est molestie viverra. Nunc quis bibendum orci. Donec feugiat massa mi, at hendrerit mauris rutrum at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel augue sit amet est molestie viverra. Nunc quis bibendum orci. Donec feugiat massa mi, at hendrerit mauris rutrum at. 
+  ''';
+  static const String dataController ='Data controllers and contract partners';
+  static const String importantInData ='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel augue sit amet est molestie viverra. Nunc quis bibendum orci. Donec feugiat massa mi, at hendrerit mauris rutrum at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel augue sit amet est molestie viverra. Nunc quis bibendum orci. Donec feugiat massa mi, at hendrerit mauris rutrum at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel augue sit amet est molestie viverra. Nunc quis bibendum orci. Donec feugiat massa mi, at hendrerit mauris rutrum at. ';
+  static const String lorem ='Lorem ipsum dolor';
+  static const String loremDetails='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel augue sit amet est molestie viverra. Nunc quis bibendum orci. Donec feugiat massa mi, at hendrerit mauris rutrum at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel augue sit amet est molestie viverra. Nunc quis bibendum orci. Donec feugiat massa mi, at hendrerit mauris rutrum at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel augue sit amet est molestie viverra. Nunc quis bibendum orci. Donec feugiat massa mi, at hendrerit mauris rutrum at. ';
+  static const String loremDetails1 ='Nunc quis bibendum orci. Donec feugiat massa mi, at hendrerit mauris rutrum at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. ';
+  static const String loremDetails2='Nunc quis bibendum orci. Donec feugiat massa mi, at hendrerit mauris rutrum at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel augue sit amet est molestie viverra. Nunc quis bibendum orci. Donec feugiat massa mi, at hendrerit mauris rutrum at. ';
+  static const String loremDetails3 ='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel augue sit amet est molestie viverra. Nunc quis bibendum orci. Donec feugiat massa mi, at hendrerit mauris rutrum at. ';
+  static const String whatCanWeHelp ='What can we help?';
+  static const String loremSit ='Lorem ipsum dolor sit amet';
+  static const String loremSitDetails ='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultricies mi enim, quis vulputate nibh faucibus at. Maecenas est ante, suscipit vel sem non, blandit blandit erat. Praesent pulvinar ante et felis porta vulputate. Curabitur ornare velit nec fringilla finibus. Phasellus mollis pharetra ante, in ullamcorper massa ullamcorper et. Curabitur ac leo sit amet leo interdum mattis vel eu mauris.';
 
 
 

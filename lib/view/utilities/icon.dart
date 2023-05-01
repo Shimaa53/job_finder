@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:jop_finder/view/utilities/color.dart';
+
+import 'color.dart';
 
 
 class AppIcons{
   static const Icon userName=Icon(Icons.person_outlined);
   static const Icon email=Icon(Icons.email_outlined);
-  static const Icon lock=Icon(Icons.lock_outlined);
+  static const Icon lock=Icon(Icons.lock_outline_rounded);
   static const Icon eye=Icon(Icons.visibility_off_outlined);
   static const Icon back=Icon(Icons.arrow_back,);
   static const Icon message= Icon(Icons.message_outlined);
@@ -31,8 +32,8 @@ class AppIcons{
   static const Icon exit=Icon(Icons.exit_to_app_outlined,color: AppColor.danger,);
   static const Icon arrowForward=Icon(Icons.arrow_forward);
   static const Icon language=Icon(Icons.language_outlined);
-  static const Icon security=Icon(Icons.lock_outline_rounded);
   static const Icon camera=Icon(Icons.camera_alt_outlined);
+  static const Icon phone=Icon(Icons.phone_android_outlined);
 
 
 

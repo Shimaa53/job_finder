@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jop_finder/model/type_work_model.dart';
 import 'package:sizer/sizer.dart';
+import '../../../model/type_work_model.dart';
 import '../../utilities/color.dart';
 import '../custom_widget/default_text.dart';
 
