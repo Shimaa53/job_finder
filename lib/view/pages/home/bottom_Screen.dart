@@ -9,8 +9,7 @@ class BottomScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return
-      BlocConsumer<JobCubit,JobState>(
-          listener: (BuildContext context, state) {  },
+      BlocBuilder<JobCubit,JobState>(
           builder: (BuildContext context, Object? state) {
             var cubit=JobCubit.get(context);
             return Scaffold(

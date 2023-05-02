@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -6,6 +8,7 @@ import '../../../view/pages/home/home_screen.dart';
 import '../../../view/pages/messages/message_screen.dart';
 import '../../../view/pages/saved/saved_screen.dart';
 import '../../../view/utilities/app_string.dart';
+import '../../../view/utilities/color.dart';
 import '../../../view/utilities/icon.dart';
 
 part 'job_state.dart';
@@ -93,4 +96,21 @@ class JobCubit extends Cubit<JobState> {
   //   emit(ChangeSwitch());
   // }
 
+  //ChangePasswordVisibility
+  Icon icon=AppIcons.eyeOff;
+  bool obScure=true;
+  void visibility() {
+      obScure=!obScure;
+      icon=obScure?AppIcons.eyeOff:AppIcons.eye;
+    emit(ChangeVisibility());
+  }
+//   //ChangeColorButton
+//   Color color=AppColor.white;
+//   bool onPressed=false;
+// void changeColor(){
+//   onPressed=!onPressed;
+//   color=onPressed?AppColor.white:AppColor.blue;
+//   emit(ChangeColorButton());
+//
+// }
 }

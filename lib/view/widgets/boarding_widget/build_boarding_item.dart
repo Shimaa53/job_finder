@@ -2,9 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:sizer/sizer.dart';
 import '../../../model/boarding_model.dart';
 import '../../utilities/color.dart';
+import '../custom_widget/build_custom_widget.dart';
 import '../custom_widget/default_text.dart';
 
-Widget BuildBordingItem(BoardingModel buildBoardingItem){
+Widget buildBoardingItem(BoardingModel buildBoardingItem){
   return Column(
     children: [
       Image.asset(buildBoardingItem.image,height: 45.h,width: double.infinity.w),
@@ -32,7 +33,7 @@ Widget BuildBordingItem(BoardingModel buildBoardingItem){
                   ]
               ),
             ),
-            SizedBox(height: 1.6.h,),
+            buildSizedBox(height: 1.6.h,),
             DefaultText(text:buildBoardingItem.details,
               fontSize: 11.sp,
               color:AppColor.grey,

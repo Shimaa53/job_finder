@@ -1,8 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/utilities/enums.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../controller/data/local/shared.dart';
 import '../../utilities/assets.dart';
 import '../../utilities/routes.dart';
 
@@ -15,15 +17,12 @@ class SplashScreen extends StatefulWidget {
 
 class SplashScreenState extends State<SplashScreen> {
   @override
-  // bool loading=true;
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 3),
+        MyCache.getBoolean(key: MyCacheKeys.isOnBoarding)==false?
             ()=>Navigator.pushReplacementNamed(context, AppRoutes.onBoardingRoute)
-
-      //     Navigator.pushReplacement(context, MaterialPageRoute(
-      // builder: (context) =>  OnBoardingScreen()))
-
+            :()=>Navigator.pushReplacementNamed(context, AppRoutes.homePageRoute)
     );
   }
 

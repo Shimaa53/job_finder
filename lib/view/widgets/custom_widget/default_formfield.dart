@@ -14,6 +14,7 @@ class DefaultFormField extends StatelessWidget {
   final void Function(String)? onChanged;
   final VoidCallback? onTap;
   final bool? isDense;
+  final bool obScure;
   final Color?color;
   final double?fontSize;
   final FontWeight fontWeight;
@@ -37,7 +38,8 @@ class DefaultFormField extends StatelessWidget {
   this.width,
   this.color,
   this.fontSize,
-  this.fontWeight=FontWeight.normal
+  this.fontWeight=FontWeight.normal,
+  this.obScure=false
   });
   @override
   Widget build(BuildContext context) {
@@ -50,6 +52,7 @@ class DefaultFormField extends StatelessWidget {
 
       child:
       TextFormField(
+        obscureText: obScure,
         decoration: InputDecoration(
           prefixIcon: prefixIcon,
           suffixIcon: suffixIcon,

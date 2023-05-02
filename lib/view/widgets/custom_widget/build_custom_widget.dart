@@ -9,10 +9,11 @@ import 'package:flutter/material.dart';
   );
 }
 
-buildDivider({double? height,double? thickness})=>
+buildDivider({double? height,double? thickness,Color? color})=>
     Divider(
       height: height,
       thickness: thickness,
+      color: color,
     );
 
 

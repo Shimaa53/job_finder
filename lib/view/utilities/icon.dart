@@ -7,7 +7,8 @@ class AppIcons{
   static const Icon userName=Icon(Icons.person_outlined);
   static const Icon email=Icon(Icons.email_outlined);
   static const Icon lock=Icon(Icons.lock_outline_rounded);
-  static const Icon eye=Icon(Icons.visibility_off_outlined);
+  static const Icon eyeOff=Icon(Icons.visibility_off_outlined);
+  static const Icon eye=Icon(Icons.visibility_outlined);
   static const Icon back=Icon(Icons.arrow_back,);
   static const Icon message= Icon(Icons.message_outlined);
   static const Icon home= Icon(Icons.home_outlined);
