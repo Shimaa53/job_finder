@@ -104,6 +104,14 @@ class JobCubit extends Cubit<JobState> {
       icon=obScure?AppIcons.eyeOff:AppIcons.eye;
     emit(ChangeVisibility());
   }
+
+  //checkBox in login
+  bool? isChecked=false;
+void CheckBox(newValue){
+  isChecked=newValue;
+  emit(CheckBoxRemember());
+}
+
 //   //ChangeColorButton
 //   Color color=AppColor.white;
 //   bool onPressed=false;

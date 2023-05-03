@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../utilities/app_string.dart';
 import '../../utilities/assets.dart';
 import '../../utilities/color.dart';
@@ -17,19 +16,18 @@ class AccountReady extends StatelessWidget {
     return Scaffold(
         body:
         Padding(
-          padding:  EdgeInsets.symmetric(horizontal: 6.w),
+          padding:  EdgeInsets.only(left: 6.w,right: 6.w,top: 25.h,bottom: 4.h),
           child: Column(
-
             children: [
-              SizedBox(height: 25.h,),
               Image.asset(AppAssets.accountSuccess,height: 19.h,width: 100.w,),
-              SizedBox(height: 1.1.h,),
+              buildSizedBox(height: 1.1.h,),
               DefaultText(text: AppString.text1InAccountSuccess,fontSize: 19.sp,fontWeight: FontWeight.w500,color:  AppColor.darkBlue,),
-              SizedBox(height: 1.1.h,),
+              buildSizedBox(height: 1.1.h,),
               DefaultText(text:AppString.text2InAccountSuccess,fontSize: 11.sp,
                 color: AppColor.grey,
+                height: 1.4,
               ),
-              SizedBox(height: 30.h,),
+              buildSpacer(),
               MainButton(
                   text: AppString.start,
                   onTap: () {

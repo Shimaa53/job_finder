@@ -5,17 +5,17 @@ import '../../utilities/color.dart';
 import '../custom_widget/default_text.dart';
 
 Widget workTypeItem(TypeWorkModel typeWork)=>
-    Container(
-      height: 17.3.h,
-      width: 39.w,
-      decoration: BoxDecoration(
-          color: AppColor.white1,
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: AppColor.white,
-          )),
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 3.5.w, vertical: 2.7.h),
+    InkWell(
+      child: Container(
+        height: 15.3.h,
+        width: 39.w,
+        padding: EdgeInsets.symmetric(horizontal: 3.5.w,vertical: 1.5.h),
+        decoration: BoxDecoration(
+            color: AppColor.white1,
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(
+              color: AppColor.white,
+            )),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

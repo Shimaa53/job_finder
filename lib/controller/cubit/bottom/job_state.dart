@@ -7,4 +7,4 @@ class JobInitial extends JobState {}
 class ChangeBottomNavigation extends JobState {}
 class ChangeSwitch extends JobState {}
 class ChangeVisibility extends JobState {}
-class ChangeColorButton extends JobState {}
+class CheckBoxRemember extends JobState {}

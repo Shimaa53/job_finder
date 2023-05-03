@@ -34,6 +34,7 @@ class AppString{
   static const String passwordNotEmpty ='password must not be empty';
   static const String text1InLogin ='Login';
   static const String text2InLogin ='Please login to find your dream job';
+  static const String rememberMe ='Remember me';
   static const String forgetPassword ='Forgot Password?';
   static const String notHaveAccount ='Dont’t have an account?';
   static const String register ='Register';
@@ -53,7 +54,8 @@ class AppString{
   static const String text2InPasswordSuccess =' succesfully!';
   static const String text3InPasswordSuccess ='Your password has been changed successfully, we will let you know if there are more problems with your account';
   static const String text1InAccountSuccess ='Your account has been setup!';
-  static const String text2InAccountSuccess ='We have customized feeds according to your preferences';
+  static const String text2InAccountSuccess ='''We have customized feeds according to your
+                          preferences''';
   static const String text1InTypeWork ='What type of work are you interested in?';
   static const String text2InTypeWork ='Tell us what you’re interested in so we can customise the app for your needs.';
   static const String uiDesigner ='UI/UX Designer';

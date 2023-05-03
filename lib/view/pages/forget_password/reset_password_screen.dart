@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../utilities/app_string.dart';
 import '../../utilities/assets.dart';
 import '../../utilities/color.dart';
@@ -18,11 +20,9 @@ class ResetPassword extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
         leading: Padding(
           padding:  EdgeInsets.only(left: 4.w),
-          child: IconButton(icon: Icon(Icons.arrow_back,color: AppColor.darkGrey,),
+          child: IconButton(icon: AppIcons.back,color: AppColor.darkGrey,
             onPressed: (){
               Navigator.pop(context);
             },
@@ -35,21 +35,20 @@ class ResetPassword extends StatelessWidget {
           )
         ],
       ),
-      body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 6.w),
-          child:Form(
-            key: formKey,
-            child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 6.w,vertical: 4.h),
+            child:Form(
+              key: formKey,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 3.h,),
                   DefaultText(text: AppString.text1InRePassword,fontSize: 19.sp,fontWeight: FontWeight.w500,color:  AppColor.darkBlue,),
-                  SizedBox(height: 1.1.h,),
+                  buildSizedBox(height: 1.1.h,),
                   DefaultText(text:AppString.text2InRePassword,fontSize: 11.sp,
                     color: AppColor.grey,
                   ),
-                  SizedBox(height: 6.h,),
+                  buildSizedBox(height: 6.h,),
                   DefaultFormField(
                       prefixIcon: AppIcons.email,
                       hintText: AppString.emailReset,
@@ -67,7 +66,7 @@ class ResetPassword extends StatelessWidget {
                           return null;
                         }
                       }),
-                  SizedBox(height: 40.h,),
+                  buildSizedBox(height: 41.h,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -93,10 +92,9 @@ class ResetPassword extends StatelessWidget {
                       colorBox:AppColor.blue  ),
 
 
-                ],
-              ),
-            ),
-          )),
+]),
+            )),
+      ),
 
     );
   }
