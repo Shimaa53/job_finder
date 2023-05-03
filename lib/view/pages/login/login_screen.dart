@@ -3,9 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:job_finder/controller/cubit/bottom/job_cubit.dart';
 import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
+import '../../../controller/data/local/shared.dart';
 import '../../utilities/app_string.dart';
 import '../../utilities/assets.dart';
 import '../../utilities/color.dart';
+import '../../utilities/enums.dart';
 import '../../utilities/icon.dart';
 import '../../utilities/routes.dart';
 import '../../widgets/custom_widget/default_formfield.dart';
@@ -16,9 +18,9 @@ import '../../widgets/custom_widget/main_button.dart';
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
 
-  TextEditingController nameController=TextEditingController();
+  TextEditingController nameController=TextEditingController(text: MyCache.getString(key: MyCacheKeys.name));
 
-  TextEditingController passwordController=TextEditingController();
+  TextEditingController passwordController=TextEditingController(text: MyCache.getString(key: MyCacheKeys.password));
 
   final formKey=GlobalKey<FormState>();
 
@@ -140,6 +142,9 @@ class LoginScreen extends StatelessWidget {
                                   color: AppColor.grey,
                                   onTap: () {
                                     if (formKey.currentState!.validate()) {
+                                      MyCache.putString(key: MyCacheKeys.name, value: nameController.text);
+                                      MyCache.putString(key: MyCacheKeys.password, value: passwordController.text);
+
                                       Navigator.pushNamed(
                                           context, AppRoutes.homePageRoute);
                                     }

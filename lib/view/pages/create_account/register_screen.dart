@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:job_finder/controller/cubit/bottom/job_cubit.dart';
+import 'package:job_finder/controller/data/local/shared.dart';
+import 'package:job_finder/view/utilities/enums.dart';
 import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
 import '../../utilities/app_string.dart';
@@ -141,7 +143,6 @@ class RegisterScreen extends StatelessWidget {
                               ),
                               MainButton(
                                   text: AppString.createAccount,
-                                  color: AppColor.grey,
                                   onTap: () {
                                     if (formKey.currentState!.validate()) {
                                       Navigator.pushNamed(
@@ -149,7 +150,7 @@ class RegisterScreen extends StatelessWidget {
                                     }
                                   }
                                   ,
-                                  colorBox: AppColor.white
+                                  colorBox: AppColor.blue
                               ),
                               buildSizedBox(height: 2.6.h),
                               Row(

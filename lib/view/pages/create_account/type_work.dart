@@ -22,26 +22,27 @@ class TypeWork extends StatelessWidget {
         body:SafeArea(
           child: SingleChildScrollView(
             child: Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 6.w),
+              padding:  EdgeInsets.symmetric(horizontal: 6.w,vertical: 4.h),
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children:[
-                    buildSizedBox(height: 4.h,),
                     DefaultText(text: AppString.text1InTypeWork,fontSize: 19.sp,fontWeight: FontWeight.w500,color:  AppColor.darkBlue,),
                     buildSizedBox(height: 1.1.h,),
                     DefaultText(text:AppString.text2InTypeWork,fontSize: 11.sp,
                       color: AppColor.grey,
                     ),
                     buildSizedBox(height: 4.h,),
-                    GridView.builder(
-                        physics: NeverScrollableScrollPhysics(),
-                        gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                          crossAxisSpacing: 15,
-                          mainAxisSpacing: 20,
-                        ),
-                        itemBuilder:(context, index) =>workTypeItem(TypeWorkModel.type[index]),
-                      itemCount: TypeWorkModel.type.length,
+                    Expanded(
+                      child: GridView.builder(
+                          physics: NeverScrollableScrollPhysics(),
+                          gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                            crossAxisSpacing: 15,
+                            mainAxisSpacing: 20,
+                          ),
+                          itemBuilder:(context, index) =>workTypeItem(TypeWorkModel.type[index]),
+                        itemCount: TypeWorkModel.type.length,
+                      ),
                     ),
                     MainButton(
                       text: AppString.next ,
@@ -59,3 +60,6 @@ class TypeWork extends StatelessWidget {
     );
   }
 }
+
+
+

@@ -1,5 +1,5 @@
 enum MyCacheKeys {
   isOnBoarding,
-  email,
+  name,
   password,
 }
