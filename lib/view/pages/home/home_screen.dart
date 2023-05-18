@@ -17,7 +17,6 @@ class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
 
   TextEditingController searchController=TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return
@@ -28,7 +27,7 @@ class HomeScreen extends StatelessWidget {
               Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children:[
-                    SizedBox(height: 4.h,),
+                    buildSizedBox(height: 4.h,),
                     Row(
                       children:[
                         Column(
@@ -36,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                             children:[
 
                               DefaultText(text: AppString.text1InHome,fontSize: 19.sp,fontWeight: FontWeight.w500,color:  AppColor.darkBlue),
-                              SizedBox(height: 1.1.h,),
+                              buildSizedBox(height: 1.1.h,),
                               DefaultText(text:AppString.text2InHome,)
                             ]
                         ),
@@ -54,7 +53,7 @@ class HomeScreen extends StatelessWidget {
 
                       ],
                     ),
-                    SizedBox(height: 3.5.h,),
+                    buildSizedBox(height: 3.5.h,),
                     DefaultFormField(
                       controller: searchController,
                       prefixIcon:AppIcons.search,
@@ -66,11 +65,11 @@ class HomeScreen extends StatelessWidget {
                       },
 
                     ),
-                    SizedBox(height: 1.1.h,),
+                    buildSizedBox(height: 1.1.h,),
                     Row(
                       children: [
                         DefaultText(text:AppString.suggestJob,fontSize: 12.5.sp,fontWeight: FontWeight.w500,color: AppColor.darkBlue,),
-                        Spacer(),
+                        buildSpacer(),
                         TextButton(
                             onPressed: (){},
                             child: DefaultText(
@@ -78,19 +77,19 @@ class HomeScreen extends StatelessWidget {
                             ))
                       ],
                     ),
-                    SizedBox(height: 1.1.h,),
+                    buildSizedBox(height: 1.1.h,),
                     Expanded(
                       child: ListView.separated(
                           scrollDirection: Axis.horizontal,
-                          itemBuilder: (context, index) => BuildSuggestJob(SuggestJobModel.suggest[index]),
-                          separatorBuilder:(context,index) =>SizedBox(width: 4.w,),
+                          itemBuilder: (context, index) => buildSuggestJob(SuggestJobModel.suggest[index]),
+                          separatorBuilder:(context,index) =>buildSizedBox(width: 4.w,),
                           itemCount: SuggestJobModel.suggest.length),
                     ),
-                    SizedBox(height: 1.1.h,),
+                    buildSizedBox(height: 1.1.h,),
                     Row(
                       children: [
                         DefaultText(text:AppString.recentJob,fontSize: 12.5.sp,fontWeight: FontWeight.w500,color: AppColor.darkBlue,),
-                        Spacer(),
+                        buildSpacer(),
                         TextButton(
                             onPressed: (){},
                             child: DefaultText(
@@ -98,11 +97,11 @@ class HomeScreen extends StatelessWidget {
                             ))
                       ],
                     ),
-                    SizedBox(height: 1.1.h,),
+                    buildSizedBox(height: 1.1.h,),
                     Expanded(
                       child: ListView.separated(
                           itemBuilder: (context, index) => BuildRecentJob(RecentJobModel.recent[index]),
-                          separatorBuilder:(context,index)=> Divider(),
+                          separatorBuilder:(context,index)=> buildDivider(),
                           itemCount: RecentJobModel.recent.length),
                     )
                   ]

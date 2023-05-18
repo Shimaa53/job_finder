@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-
+//SizedBox
  buildSizedBox({double? height,double? width,Widget? child}) {
    return SizedBox(
     height:height ,
@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
   );
 }
 
+//Divider
 buildDivider({double? height,double? thickness,Color? color})=>
     Divider(
       height: height,
@@ -16,5 +17,5 @@ buildDivider({double? height,double? thickness,Color? color})=>
       color: color,
     );
 
-
+//Spacer
  buildSpacer()=>Spacer();

@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../view/pages/apply_job/job_apply.dart';
 import '../../../view/pages/home/home_screen.dart';
 import '../../../view/pages/messages/message_screen.dart';
+import '../../../view/pages/profile/profile_screen.dart';
 import '../../../view/pages/saved/saved_screen.dart';
 import '../../../view/utilities/app_string.dart';
 import '../../../view/utilities/color.dart';
@@ -33,7 +34,7 @@ class JobCubit extends Cubit<JobState> {
     MessageScreen(),
     ApplyJob(),
     SavedScreen(),
-    SavedScreen(),
+    ProfileScreen(),
 
   ];
 

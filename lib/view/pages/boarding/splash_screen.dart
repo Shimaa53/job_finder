@@ -22,7 +22,7 @@ class SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds: 3),
         MyCache.getBoolean(key: MyCacheKeys.isOnBoarding)==false?
             ()=>Navigator.pushReplacementNamed(context, AppRoutes.onBoardingRoute)
-            :()=>Navigator.pushReplacementNamed(context, AppRoutes.homePageRoute)
+            :()=>Navigator.pushReplacementNamed(context, AppRoutes.bottomPageRoute)
     );
   }
 

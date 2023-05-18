@@ -1,4 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../controller/cubit/bottom/job_cubit.dart';
@@ -13,7 +23,6 @@ class SearchScreen extends StatelessWidget {
    SearchScreen({Key? key}) : super(key: key);
 
   TextEditingController searchController=TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +44,7 @@ class SearchScreen extends StatelessWidget {
                          Navigator.pop(context);
                        },
                          icon: AppIcons.back),
-                     SizedBox(width: 2.w,),
+                     buildSizedBox(width: 2.w,),
                      Expanded(
                        child: DefaultFormField(
                          controller: searchController,
@@ -53,12 +62,12 @@ class SearchScreen extends StatelessWidget {
                ),
              ),
             ),
-           SizedBox(height: 1.5.h,),
+           buildSizedBox(height: 1.5.h,),
            Padding(
              padding:  EdgeInsets.symmetric(horizontal: 6.w),
              child: DefaultText(text: AppString.recentSearch,color: AppColor.grey,fontSize:11.sp,),
            ),
-           SizedBox(height: 1.5.h,),
+           buildSizedBox(height: 1.5.h,),
            Container(
              height: 32.h,
              width: double.infinity,
@@ -69,9 +78,9 @@ class SearchScreen extends StatelessWidget {
                  child: ListView.builder(itemBuilder: (context, index) => Row(
                    crossAxisAlignment: CrossAxisAlignment.start,
                    children: [
-                     SizedBox(height: 1.5.h,),
+                     buildSizedBox(height: 1.5.h,),
                      AppIcons.time,
-                     SizedBox(width: 2.w,),
+                     buildSizedBox(width: 2.w,),
                      InkWell(
                        onTap: (){
                          Navigator.pushNamed(context,AppRoutes.selectJobPageRoute);
@@ -79,7 +88,7 @@ class SearchScreen extends StatelessWidget {
                          child: DefaultText(text:JobCubit.recentSearch[index],
                            color: AppColor.darkBlue,
                            fontSize:11.sp,)),
-                     Spacer(),
+                     buildSpacer(),
                      IconButton(onPressed: (){}, icon: AppIcons.cancel,color: AppColor.danger,)
                    ],
                  )
@@ -88,12 +97,12 @@ class SearchScreen extends StatelessWidget {
                )
              ),
            ),
-           SizedBox(height: 2.h,),
+           buildSizedBox(height: 2.h,),
            Padding(
              padding:  EdgeInsets.symmetric(horizontal: 6.w),
              child: DefaultText(text: AppString.popularSearch,color: AppColor.grey,fontSize:11.sp,),
            ),
-           SizedBox(height: 2.h,),
+           buildSizedBox(height: 2.h,),
            Container(
              height: 32.h,
              width: double.infinity,
@@ -104,11 +113,11 @@ class SearchScreen extends StatelessWidget {
                    child: ListView.builder(itemBuilder: (context, index) => Row(
                      crossAxisAlignment: CrossAxisAlignment.start,
                      children: [
-                       SizedBox(height: 1.5.h,),
+                       buildSizedBox(height: 1.5.h,),
                        AppIcons.time,
-                       SizedBox(width: 2.w,),
+                       buildSizedBox(width: 2.w,),
                        InkWell(child: DefaultText(text:JobCubit.popularSearch[index],color: AppColor.darkBlue,fontSize:11.sp,)),
-                       Spacer(),
+                       buildSpacer(),
                        IconButton(onPressed: (){}, icon: AppIcons.cancel,color: AppColor.danger,)
                      ],
                    )

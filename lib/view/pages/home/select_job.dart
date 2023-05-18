@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../../model/select_job_model.dart';
 import '../../utilities/app_string.dart';
 import '../../utilities/color.dart';
@@ -14,7 +14,6 @@ class SelectJob extends StatelessWidget {
    SelectJob({Key? key}) : super(key: key);
   TextEditingController searchController=TextEditingController();
    var scaffoldKey=GlobalKey<ScaffoldState>();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +38,7 @@ class SelectJob extends StatelessWidget {
                               Navigator.pop(context);
                             },
                             icon: AppIcons.back),
-                        SizedBox(width: 2.w,),
+                        buildSizedBox(width: 2.w,),
                         Expanded(
                           child: DefaultFormField(
                             controller: searchController,
@@ -65,7 +64,7 @@ class SelectJob extends StatelessWidget {
                                   icon: Icon(Icons.filter),
                                 onPressed: (){
                                   scaffoldKey.currentState!.showBottomSheet((context) =>
-                                  BuildSetFilter(context)                                  );
+                                  buildSetFilter(context)                                  );
                                 },
                               ),
                               Container(
@@ -136,7 +135,7 @@ class SelectJob extends StatelessWidget {
 
 
                             ]);},
-                  separatorBuilder: (BuildContext context, int index) =>SizedBox(width: 4.w,),
+                  separatorBuilder: (BuildContext context, int index) =>buildSizedBox(width: 4.w,),
                   itemCount: 1,
                       ),
               )                        ],
@@ -147,43 +146,43 @@ class SelectJob extends StatelessWidget {
                         ),
 
                 ),
-          SizedBox(height: 2.h,),
+          buildSizedBox(height: 2.h,),
           Padding(
             padding:  EdgeInsets.symmetric(horizontal: 6.w),
             child: DefaultText(text: AppString.feature,color: AppColor.grey,fontSize:11.sp,),
           ),
-          SizedBox(height: 2.h,),
+          buildSizedBox(height: 2.h,),
           Expanded(child: Container(
             color: AppColor.white0,
             child: Padding(
               padding:  EdgeInsets.only(left: 6.w,right: 6.w,top: 2.h),
               child:ListView.separated(
                   itemBuilder:(context, index) =>  buildSelectJob(SelectJobModel.selectJob[index],context),
-                  separatorBuilder: (context,index)=>Divider(thickness: 2,),
+                  separatorBuilder: (context,index)=>buildDivider(thickness: 2,),
                   itemCount: SelectJobModel.selectJob.length)
             )
           )),
 
-
-          // Padding(
-          //   padding:  EdgeInsets.symmetric(horizontal: 6.w),
-          //   child: Column(
-          //
-          //     children: [
-          //       SizedBox(height: 25.h,),
-          //       Image.asset(AppAssets.notFound,height: 19.h,width: 100.w,),
-          //       SizedBox(height: 1.1.h,),
-          //       DefaultText(text: AppString.notFound,fontSize: 19.sp,fontWeight: FontWeight.w500,color:  AppColor.darkBlue,),
-          //       SizedBox(height: 1.1.h,),
-          //       DefaultText(text:AppString.tryDiff,fontSize: 11.sp,
-          //         color: AppColor.grey,
-          //       ),
-          //
-          //
-          //
-          //     ],
-          //   ),
-          // )
+//padding
+//           Padding(
+//             padding:  EdgeInsets.symmetric(horizontal: 6.w),
+//             child: Column(
+//
+//               children: [
+//                 buildSizedBox(height: 25.h,),
+//                 Image.asset(AppAssets.notFound,height: 19.h,width: 100.w,),
+//                 buildSizedBox(height: 1.1.h,),
+//                 DefaultText(text: AppString.notFound,fontSize: 19.sp,fontWeight: FontWeight.w500,color:  AppColor.darkBlue,),
+//                 buildSizedBox(height: 1.1.h,),
+//                 DefaultText(text:AppString.tryDiff,fontSize: 11.sp,
+//                   color: AppColor.grey,
+//                 ),
+//
+//
+//
+//               ],
+//             ),
+//            )
 
 
 

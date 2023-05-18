@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
 import '../../../model/type_work_model.dart';
 import '../../utilities/color.dart';
@@ -32,7 +33,7 @@ Widget workTypeItem(TypeWorkModel typeWork)=>
                     color: AppColor.darkGrey,
                   )),
             ),
-            SizedBox(
+            buildSizedBox(
               height: 2.h,
             ),
             DefaultText(

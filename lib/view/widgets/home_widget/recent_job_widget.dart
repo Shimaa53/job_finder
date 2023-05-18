@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../model/recent_job.dart';
@@ -14,7 +21,7 @@ Widget BuildRecentJob(RecentJobModel buildRecentJob)=>
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(buildRecentJob.image,height: 6.2.h,width:10.w),
-            SizedBox(width: 4.w,),
+            buildSizedBox(width: 4.w,),
             Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:[
@@ -22,24 +29,24 @@ Widget BuildRecentJob(RecentJobModel buildRecentJob)=>
                     fontWeight: FontWeight.w500,
                     color: AppColor.darkBlue,
                   ),
-                  SizedBox(height: 0.7.h,),
+                  buildSizedBox(height: 0.7.h,),
                   Row(
                     children: [
                       DefaultText(text:buildRecentJob.text,color: AppColor.grey1,),
-                      SizedBox(width: 0.7.w,),
+                      buildSizedBox(width: 0.7.w,),
                       CircleAvatar(backgroundColor: AppColor.grey1,minRadius: 2,),
-                      SizedBox(width: 0.7.w,),
+                      buildSizedBox(width: 0.7.w,),
                       DefaultText(text:AppString.place,color: AppColor.grey1,)
 
                     ],
                   ),
                 ]
             ),
-            Spacer(),
+            buildSpacer(),
             IconButton(onPressed: (){}, icon: AppIcons.saved,color:  AppColor.darkBlue,iconSize: 30,)
           ],
         ),
-        SizedBox(height:2.5.h,),
+        buildSizedBox(height:2.5.h,),
         Row(
           children: [
             Container(
@@ -55,7 +62,7 @@ Widget BuildRecentJob(RecentJobModel buildRecentJob)=>
                 ),
               ),
             ),
-            SizedBox(width: 1.w,),
+            buildSizedBox(width: 1.w,),
             Container(
               height: 35,
               padding: EdgeInsets.symmetric(horizontal: 4.w,vertical: 0.8.h),
@@ -69,7 +76,7 @@ Widget BuildRecentJob(RecentJobModel buildRecentJob)=>
                 ),
               ),
             ),
-            SizedBox(width: 1.w,),
+            buildSizedBox(width: 1.w,),
             Container(
               height: 35,
               padding: EdgeInsets.symmetric(horizontal: 4.w,vertical: 0.8.h),
@@ -83,7 +90,7 @@ Widget BuildRecentJob(RecentJobModel buildRecentJob)=>
                 ),
               ),
             ),
-            Spacer(),
+            buildSpacer(),
             RichText(
                 text: TextSpan(
                     text: '${AppString.dollar}${AppString.p15}${AppString.thousand}',
