@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../utilities/app_string.dart';
@@ -23,9 +24,7 @@ class ApplyJob extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0.0,
         centerTitle: true,
-        backgroundColor: Colors.transparent,
         leading: IconButton(
           icon: AppIcons.back,
           color: AppColor.darkGrey,
@@ -61,7 +60,7 @@ class ApplyJob extends StatelessWidget {
 
                       ),
                     ),
-                    SizedBox(height: 1.h,),
+                    buildSizedBox(height: 1.h,),
                     DefaultText(text:AppString.biodate,
                       fontWeight: FontWeight.w500,
                       color: AppColor.darkBlue,
@@ -69,9 +68,9 @@ class ApplyJob extends StatelessWidget {
 
                   ],
                 ),
-                SizedBox(width: 2.w,),
+                buildSizedBox(width: 2.w,),
                 DefaultText(text: AppString.line,color: AppColor.lightGrey,),
-                SizedBox(width: 2.w,),
+                buildSizedBox(width: 2.w,),
                 Column(
                   children: [
                     CircleAvatar(
@@ -87,7 +86,7 @@ class ApplyJob extends StatelessWidget {
 
                       ),
                     ),
-                    SizedBox(height: 1.h,),
+                    buildSizedBox(height: 1.h,),
                     DefaultText(text:AppString.typeOfWork,
                       fontWeight: FontWeight.w500,
                       color: AppColor.darkBlue,
@@ -95,9 +94,9 @@ class ApplyJob extends StatelessWidget {
 
                   ],
                 ),
-                SizedBox(width: 2.w,),
+                buildSizedBox(width: 2.w,),
                 DefaultText(text: AppString.line,color: AppColor.lightGrey,),
-                SizedBox(width: 2.w,),
+                buildSizedBox(width: 2.w,),
                 Column(
                   children: [
                     CircleAvatar(
@@ -113,7 +112,7 @@ class ApplyJob extends StatelessWidget {
 
                       ),
                     ),
-                    SizedBox(height: 1.h,),
+                    buildSizedBox(height: 1.h,),
                     DefaultText(text:AppString.upLoadPortFolio,
                       fontWeight: FontWeight.w500,
                       color: AppColor.darkBlue,
@@ -125,14 +124,14 @@ class ApplyJob extends StatelessWidget {
 
               ],
             ),
-            SizedBox(height: 3.h,),
+            buildSizedBox(height: 3.h,),
             DefaultText(text:AppString.upLoadPortFolio,fontSize: 13.sp,
               fontWeight: FontWeight.w500,
               color: AppColor.darkBlue,
             ),
             DefaultText(text:AppString.fillBio
               ,color: AppColor.grey1,),
-            SizedBox(height: 3.h,),
+            buildSizedBox(height: 3.h,),
             Row(
               children: [
                 DefaultText(text:AppString.uploadCv,
@@ -142,7 +141,7 @@ class ApplyJob extends StatelessWidget {
                 DefaultText(text: AppString.astrik,color: AppColor.danger,)
               ],
             ),
-            SizedBox(height: 1.h,),
+            buildSizedBox(height: 1.h,),
             Container(
                height: 10.h,
                padding: EdgeInsets.symmetric(horizontal: 4.w,vertical: 0.8.h),
@@ -153,7 +152,7 @@ class ApplyJob extends StatelessWidget {
               child: Row(
                 children: [
                   Image.asset(AppAssets.pdf,height: 4.5.h,width: 6.75.w,),
-                  SizedBox(width: 3.w,),
+                  buildSizedBox(width: 3.w,),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -161,25 +160,25 @@ class ApplyJob extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         color: AppColor.darkBlue,
                       ),
-                      SizedBox(height: 1.h,),
+                      buildSizedBox(height: 1.h,),
 
                       DefaultText(text:'${AppString.cv}.${AppString.sizePdf}'
                         ,color: AppColor.grey1,),
 
                     ],
                   ),
-                  const Spacer(),
+                   buildSpacer(),
                   IconButton(onPressed: (){}, icon: AppIcons.edit),
                   AppIcons.cancel,
                 ],
               ),
             ),
-            SizedBox(height: 2.h,),
+            buildSizedBox(height: 2.h,),
             DefaultText(text:AppString.otherFile,fontSize: 13.sp,
               fontWeight: FontWeight.w500,
               color: AppColor.darkBlue,
             ),
-            SizedBox(height: 1.h,),
+            buildSizedBox(height: 1.h,),
             Container(
               height: 30.h,
             padding: EdgeInsets.symmetric(horizontal: 4.w,vertical: 0.8.h),
@@ -215,7 +214,7 @@ class ApplyJob extends StatelessWidget {
             ),
 
 
-            Spacer(),
+            buildSpacer(),
             MainButton(
                 text: AppString.submit,
                 onTap: () {
@@ -231,7 +230,7 @@ class ApplyJob extends StatelessWidget {
 //             ),
 //             DefaultText(text:AppString.fillBio
 //               ,color: AppColor.grey1,),
-//             SizedBox(height: 3.h,),
+//             buildSizedBox(height: 3.h,),
 //             Row(
 //               children: [
 //                 DefaultText(text:AppString.fullName,
@@ -241,11 +240,11 @@ class ApplyJob extends StatelessWidget {
 //                 DefaultText(text: AppString.astrik,color: AppColor.danger,)
 //               ],
 //             ),
-//             SizedBox(height: 1.h,),
+//             buildSizedBox(height: 1.h,),
 //             DefaultFormField(
 //               prefixIcon: AppIcons.userName,
 //             ),
-//             SizedBox(height: 2.h,),
+//             buildSizedBox(height: 2.h,),
 //             Row(
 //               children: [
 //                 DefaultText(text:AppString.email,
@@ -256,11 +255,11 @@ class ApplyJob extends StatelessWidget {
 //
 //               ],
 //             ),
-//             SizedBox(height: 1.h,),
+//             buildSizedBox(height: 1.h,),
 //             DefaultFormField(
 //               prefixIcon: AppIcons.email,
 //             ),
-//             SizedBox(height: 2.h,),
+//             buildSizedBox(height: 2.h,),
 //             Row(
 //               children: [
 //                 DefaultText(text:AppString.noHandphone,
@@ -271,11 +270,11 @@ class ApplyJob extends StatelessWidget {
 //
 //               ],
 //             ),
-//             SizedBox(height: 1.h,),
+//             buildSizedBox(height: 1.h,),
 //             DefaultFormField(
 //               prefixIcon: AppIcons.applied,
 //             ),
-//             Spacer(),
+//             buildSpacer(),
 //             MainButton(
 //                 text: AppString.next,
 //                 onTap: () {
@@ -283,20 +282,20 @@ class ApplyJob extends StatelessWidget {
 //                 }
 //                 ,
 //                 colorBox:AppColor.blue  ),
-
-            //  ----------------
-            // two محتاجه تعديل
-            // DefaultText(text:AppString.typeOfWork,fontSize: 13.sp,
-            //   fontWeight: FontWeight.w500,
-            //   color: AppColor.darkBlue,
-            // ),
-            // DefaultText(text:AppString.fillBio
-            //   ,color: AppColor.grey1,),
-            // SizedBox(height: 3.h,),
-
-            // Card(
-            //   child: TypeOfWork(index),
-            // ),
+//
+//              ----------------
+//             two محتاجه تعديل
+//             DefaultText(text:AppString.typeOfWork,fontSize: 13.sp,
+//               fontWeight: FontWeight.w500,
+//               color: AppColor.darkBlue,
+//             ),
+//             DefaultText(text:AppString.fillBio
+//               ,color: AppColor.grey1,),
+//             buildSizedBox(height: 3.h,),
+//
+//             Card(
+//               child: TypeOfWork(index),
+//             ),
 
 
 

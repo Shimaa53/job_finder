@@ -1,4 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
 import '../../utilities/app_string.dart';
 import '../../utilities/assets.dart';
@@ -26,9 +35,7 @@ int currentIndex=0;
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          elevation: 0.0,
           centerTitle: true,
-          backgroundColor: Colors.transparent,
           leading: IconButton(
               icon: AppIcons.back,
             color: AppColor.darkGrey,
@@ -51,26 +58,26 @@ int currentIndex=0;
             child:Column(
           children: [
             Image.asset(AppAssets.twitter,height: 6.5.h,width: 12.w,),
-            SizedBox(height: 1.h,),
+            buildSizedBox(height: 1.h,),
             DefaultText(text:AppString.sUiDesign,fontSize: 13.sp,
               fontWeight: FontWeight.w500,
               color: AppColor.darkBlue,
             ),
-            SizedBox(height: 1.h,),
+            buildSizedBox(height: 1.h,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 DefaultText(text:AppString.twitter
                   ,color: AppColor.grey1,),
-                SizedBox(width: 0.7.w,),
+                buildSizedBox(width: 0.7.w,),
                 CircleAvatar(backgroundColor: AppColor.grey1,minRadius: 2,),
-                SizedBox(width: 0.7.w,),
+                buildSizedBox(width: 0.7.w,),
                 DefaultText(text:'${AppString.jakarta},${AppString.indonesia}',color: AppColor.grey1,)
 
 
               ],
             ),
-            SizedBox(height: 2.h,),
+            buildSizedBox(height: 2.h,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -87,7 +94,7 @@ int currentIndex=0;
                     ),
                   ),
                 ),
-                SizedBox(width:2.w,),
+                buildSizedBox(width:2.w,),
                 Container(
                   height: 4.5.h,
                   padding: EdgeInsets.symmetric(horizontal: 4.w,vertical: 0.8.h),
@@ -101,7 +108,7 @@ int currentIndex=0;
                     ),
                   ),
                 ),
-                SizedBox(width:2.w,),
+                buildSizedBox(width:2.w,),
                 Container(
                   height: 4.5.h,
                   padding: EdgeInsets.symmetric(horizontal: 4.w,vertical: 0.8.h),
@@ -119,7 +126,7 @@ int currentIndex=0;
 
               ],
             ),
-            SizedBox(height: 3.h,),
+            buildSizedBox(height: 3.h,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -200,7 +207,7 @@ int currentIndex=0;
               ),
             ),
 
-            const Spacer(),
+             buildSpacer(),
             MainButton(
                 text: AppString.applyNow,
                 onTap: () {

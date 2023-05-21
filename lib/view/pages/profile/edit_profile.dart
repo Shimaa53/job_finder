@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../utilities/app_string.dart';
 import '../../utilities/assets.dart';
 import '../../utilities/color.dart';
@@ -12,14 +11,11 @@ import '../../widgets/custom_widget/main_button.dart';
 
 class EditScreen extends StatelessWidget {
   const EditScreen({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          elevation: 0.0,
           centerTitle: true,
-          backgroundColor: Colors.transparent,
           leading: IconButton(
             icon: AppIcons.back,
             color: AppColor.darkGrey,
@@ -48,43 +44,43 @@ class EditScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 1.h,),
+              buildSizedBox(height: 1.h,),
               Center(
                 child: DefaultText(text: AppString.changePhoto,
                   color: AppColor.blue,
                   fontWeight: FontWeight.w500,
                   fontSize: 11.sp,),
               ),
-              SizedBox(height: 3.h,),
+              buildSizedBox(height: 3.h,),
               DefaultText(text: AppString.name0,color: AppColor.grey1,),
-              SizedBox(height: 1.h,),
+              buildSizedBox(height: 1.h,),
               DefaultFormField(
                 hintText: AppString.myName,
                 color: AppColor.darkBlue,
                 fontWeight: FontWeight.w500,
                 fontSize: 11.sp,
               ),
-              SizedBox(height: 2.h,),
+              buildSizedBox(height: 2.h,),
               DefaultText(text: AppString.bio,color: AppColor.grey1,),
-              SizedBox(height: 1.h,),
+              buildSizedBox(height: 1.h,),
               DefaultFormField(
                 hintText: AppString.sUiDesign,
                 color: AppColor.darkBlue,
                 fontWeight: FontWeight.w500,
                 fontSize: 11.sp,
               ),
-              SizedBox(height: 2.h,),
+              buildSizedBox(height: 2.h,),
               DefaultText(text: AppString.address,color: AppColor.grey1,),
-              SizedBox(height: 1.h,),
+              buildSizedBox(height: 1.h,),
               DefaultFormField(
                 hintText: AppString.addressEdit,
                 color: AppColor.darkBlue,
                 fontWeight: FontWeight.w500,
                 fontSize: 11.sp,
               ),
-              SizedBox(height: 2.h,),
+              buildSizedBox(height: 2.h,),
               DefaultText(text: AppString.noHandPhone,color: AppColor.grey1,),
-              SizedBox(height: 1.h,),
+              buildSizedBox(height: 1.h,),
               DefaultFormField(
                 hintText: AppString.numMobile,
                 color: AppColor.darkBlue,
@@ -92,7 +88,7 @@ class EditScreen extends StatelessWidget {
                 fontSize: 11.sp,
               ),
 
-              Spacer(),
+              buildSpacer(),
               MainButton(
                   text: AppString.save,
                   onTap: () {

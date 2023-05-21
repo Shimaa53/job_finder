@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../utilities/app_string.dart';
@@ -15,9 +17,7 @@ class EmailAddress extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0.0,
         centerTitle: true,
-        backgroundColor: Colors.transparent,
         leading: IconButton(
           icon: AppIcons.back,
           color: AppColor.darkGrey,
@@ -41,12 +41,12 @@ class EmailAddress extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                     color: AppColor.darkBlue,
                   ),
-            SizedBox(height: 2.h,),
+            buildSizedBox(height: 2.h,),
             DefaultFormField(
                 prefixIcon: AppIcons.email,
                 keyboardType: TextInputType.emailAddress,
                 ),
-            Spacer(),
+            buildSpacer(),
             MainButton(
                 text: AppString.save,
                 onTap: () {

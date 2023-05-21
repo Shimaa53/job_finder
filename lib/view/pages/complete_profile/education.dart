@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:job_finder/view/utilities/assets.dart';
 import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
@@ -18,9 +17,7 @@ class Education extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          elevation: 0.0,
           centerTitle: true,
-          backgroundColor: Colors.transparent,
           leading: IconButton(
             icon: AppIcons.back,
             color: AppColor.darkGrey,

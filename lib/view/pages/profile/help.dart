@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../utilities/app_string.dart';
 import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
@@ -23,9 +22,7 @@ class _HelpScreenState extends State<HelpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0.0,
         centerTitle: true,
-        backgroundColor: Colors.transparent,
         leading: IconButton(
           icon: AppIcons.back,
           color: AppColor.darkGrey,

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../utilities/app_string.dart';
 import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
@@ -21,13 +20,12 @@ class _LanguageState extends State<Language> {
       selectedLanguage=language;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0.0,
         centerTitle: true,
-        backgroundColor: Colors.transparent,
         leading: IconButton(
           icon: AppIcons.back,
           color: AppColor.darkGrey,

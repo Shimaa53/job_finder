@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:job_finder/view/utilities/assets.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../model/chat_model.dart';
@@ -36,14 +41,14 @@ class ChatScreen extends StatelessWidget {
                           Navigator.pop(context);
                         },
                         icon: AppIcons.back),
-                    SizedBox(
+                    buildSizedBox(
                       width: 1.w,
                     ),
                     const CircleAvatar(
                       backgroundImage: AssetImage(AppAssets.twitter),
                       radius: 18,
                     ),
-                    SizedBox(
+                    buildSizedBox(
                       width: 2.w,
                     ),
                     DefaultText(
@@ -52,7 +57,7 @@ class ChatScreen extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                       color: AppColor.darkBlue,
                     ),
-                    const Spacer(),
+                     buildSpacer(),
                     IconButton(
                         onPressed: () {
                           scaffoldKey.currentState!.showBottomSheet((context)=>
@@ -84,7 +89,7 @@ class ChatScreen extends StatelessWidget {
           ),
         ),
 
-           Spacer(),
+           buildSpacer(),
            Container(
              height: 12.h,
              width: double.infinity,
@@ -106,7 +111,7 @@ class ChatScreen extends StatelessWidget {
 
                    ),
                  ),
-                 const SizedBox(width: 15,),
+                  buildSizedBox(width: 15,),
                  Expanded(
                    child: DefaultFormField(
                      hintText: AppString.writeMsg,
@@ -116,7 +121,7 @@ class ChatScreen extends StatelessWidget {
 
                    ),
                  ),
-                 SizedBox(width: 15,),
+                 buildSizedBox(width: 15,),
                  CircleAvatar(
                    radius: 24,
                    backgroundColor: AppColor.lightGrey,

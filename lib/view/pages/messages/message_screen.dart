@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../../model/message_model.dart';
 import '../../utilities/app_string.dart';
 import '../../utilities/color.dart';
@@ -19,9 +19,7 @@ class MessageScreen extends StatelessWidget {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        elevation: 0.0,
         centerTitle: true,
-        backgroundColor: Colors.transparent,
         leading: IconButton(
           icon: AppIcons.back,
           color: AppColor.darkGrey,
@@ -32,21 +30,21 @@ class MessageScreen extends StatelessWidget {
           fontWeight: FontWeight.w500,
           color: AppColor.darkBlue,
         ),
-
       ),
+      //padding
       // body: Padding(
       //   padding:  EdgeInsets.symmetric(horizontal: 6.w,vertical: 3.h),
       //   child: Center(
       //     child: Column(
       //       children: [
-      //         SizedBox(height: 13.h,),
+      //         buildSizedBox(height: 13.h,),
       //         Image.asset(AppAssets.noMessage,height: 19.h,width: 43.25.w,),
-      //         SizedBox(height: 3.h,),
+      //         buildSizedBox(height: 3.h,),
       //         DefaultText(text:AppString.t1InNotReciveMsg,fontSize: 16.5.sp,
       //           fontWeight: FontWeight.w500,
       //           color: AppColor.darkBlue,
       //         ),
-      //         SizedBox(height: 1.h,),
+      //         buildSizedBox(height: 1.h,),
       //         DefaultText(text:AppString.t2InNotReciveMsg
       //           ,color: AppColor.grey1,height: 1.4,
       //         ),
@@ -77,7 +75,7 @@ class MessageScreen extends StatelessWidget {
 
                   ),
                 ),
-                SizedBox(width: 2.w,),
+                buildSizedBox(width: 2.w,),
                 CircleAvatar(
                   radius: 27,
                   backgroundColor: Colors.transparent,
@@ -95,11 +93,11 @@ class MessageScreen extends StatelessWidget {
 
               ],
             ),
-            SizedBox(height:3.h,),
+            buildSizedBox(height:3.h,),
             Expanded(
               child: ListView.separated(
                   itemBuilder: (context,index)=>buildMessage(MessageModel.msg[index],context),
-                  separatorBuilder:(context,index)=> Divider(thickness: 1,),
+                  separatorBuilder:(context,index)=> buildDivider(thickness: 1,),
                   itemCount: MessageModel.msg.length),
             )
           ],

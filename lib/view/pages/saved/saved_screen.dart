@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../../model/select_job_model.dart';
 import '../../utilities/app_string.dart';
 import '../../utilities/color.dart';
@@ -9,7 +9,7 @@ import '../../widgets/custom_widget/default_text.dart';
 import '../../widgets/saved_widget/save_job_widget.dart';
 
 class SavedScreen extends StatelessWidget {
-   SavedScreen({Key? key}) : super(key: key);
+    SavedScreen({Key? key}) : super(key: key);
 static  var scaffoldKey=GlobalKey<ScaffoldState>();
 
   @override
@@ -17,7 +17,6 @@ static  var scaffoldKey=GlobalKey<ScaffoldState>();
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        elevation: 0.0,
         centerTitle: true,
         backgroundColor: AppColor.white0,
         leading: IconButton(
@@ -37,14 +36,14 @@ static  var scaffoldKey=GlobalKey<ScaffoldState>();
     //   child: Center(
     //     child: Column(
     //       children: [
-    //         SizedBox(height: 13.h,),
+    //         buildSizedBox()(height: 13.h,),
     //         Image.asset(AppAssets.saved,height: 19.h,width: 43.25.w,),
-    //         SizedBox(height: 3.h,),
+    //         buildSizedBox()(height: 3.h,),
     //         DefaultText(text:AppString.text1InSaved,fontSize: 16.5.sp,
     //           fontWeight: FontWeight.w500,
     //           color: AppColor.darkBlue,
     //         ),
-    //         SizedBox(height: 1.h,),
+    //         buildSizedBox()(height: 1.h,),
     //         DefaultText(text:AppString.text2InSaved
     //           ,color: AppColor.grey1,height: 1.4,
     //         ),
@@ -57,16 +56,16 @@ static  var scaffoldKey=GlobalKey<ScaffoldState>();
     // ),
       body: Column(
         children: [
-          SizedBox(height: 0.7.h,),
+          buildSizedBox(height: 0.7.h,),
           Center(
             child: DefaultText(text:'${AppString.number}${AppString.jobSaved}'
               ,color: AppColor.grey1,),
           ),
-          SizedBox(height: 0.7.h,),
+          buildSizedBox(height: 0.7.h,),
         Expanded(
           child: ListView.separated(
-              itemBuilder:(context, index) =>  SaveJob(SelectJobModel.selectJob[index]),
-              separatorBuilder: (context,index)=>Divider(thickness: 1,),
+              itemBuilder:(context, index) =>  saveJob(SelectJobModel.selectJob[index]),
+              separatorBuilder: (context,index)=>buildDivider(thickness: 1,),
               itemCount: SelectJobModel.selectJob.length),
         )
 

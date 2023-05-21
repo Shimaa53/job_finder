@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../utilities/app_string.dart';
 import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
@@ -22,7 +25,7 @@ Widget messageSheet(BuildContext context)=>Container(
             fontWeight: FontWeight.w500,
             color: AppColor.darkBlue,
           ),
-          SizedBox(height: 2.h,),
+          buildSizedBox(height: 2.h,),
           InkWell(
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 4.w,vertical: 2.h),
@@ -36,13 +39,13 @@ Widget messageSheet(BuildContext context)=>Container(
                     fontWeight: FontWeight.w500,
                     color: AppColor.darkBlue,
                   ),
-                  Spacer(),
+                  buildSpacer(),
                   AppIcons.forward,
                 ],
               ),
             ),
           ),
-          SizedBox(height: 1.5.h,),
+          buildSizedBox(height: 1.5.h,),
           InkWell(
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 4.w,vertical: 2.h),
@@ -56,13 +59,13 @@ Widget messageSheet(BuildContext context)=>Container(
                     fontWeight: FontWeight.w500,
                     color: AppColor.darkBlue,
                   ),
-                  Spacer(),
+                  buildSpacer(),
                   AppIcons.forward,
                 ],
               ),
             ),
           ),
-          SizedBox(height: 1.5.h,),
+          buildSizedBox(height: 1.5.h,),
           InkWell(
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 4.w,vertical: 2.h),
@@ -76,7 +79,7 @@ Widget messageSheet(BuildContext context)=>Container(
                     fontWeight: FontWeight.w500,
                     color: AppColor.darkBlue,
                   ),
-                  Spacer(),
+                  buildSpacer(),
                   AppIcons.forward,
                 ],
               ),

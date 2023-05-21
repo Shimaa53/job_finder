@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../utilities/app_string.dart';
 import '../../utilities/assets.dart';
 import '../../utilities/color.dart';
@@ -16,9 +16,7 @@ class Portfolio extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0.0,
         centerTitle: true,
-        backgroundColor: Colors.transparent,
         leading: IconButton(
           icon: AppIcons.back,
           color: AppColor.darkGrey,
@@ -41,7 +39,7 @@ class Portfolio extends StatelessWidget {
               fontWeight: FontWeight.w500,
               color: AppColor.darkBlue,
             ),
-            SizedBox(height: 3.h,),
+            buildSizedBox(height: 3.h,),
             Container(
                 height: 30.h,
                 padding: EdgeInsets.symmetric(horizontal: 4.w,vertical: 0.8.h),
@@ -75,7 +73,7 @@ class Portfolio extends StatelessWidget {
                   ),
                 )
             ),
-            SizedBox(height: 3.h,),
+            buildSizedBox(height: 3.h,),
             Container(
               height: 10.h,
               padding: EdgeInsets.symmetric(horizontal: 4.w,vertical: 0.8.h),
@@ -86,7 +84,7 @@ class Portfolio extends StatelessWidget {
               child: Row(
                 children: [
                   Image.asset(AppAssets.pdf,height: 4.5.h,width: 6.75.w,),
-                  SizedBox(width: 3.w,),
+                  buildSizedBox(width: 3.w,),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -94,14 +92,14 @@ class Portfolio extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         color: AppColor.darkBlue,
                       ),
-                      SizedBox(height: 1.h,),
+                      buildSizedBox(height: 1.h,),
 
                       DefaultText(text:'${AppString.cv}.${AppString.sizePdf}'
                         ,color: AppColor.grey1,),
 
                     ],
                   ),
-                  const Spacer(),
+                   buildSpacer(),
                   IconButton(onPressed: (){}, icon: AppIcons.edit),
                   AppIcons.cancel,
                 ],

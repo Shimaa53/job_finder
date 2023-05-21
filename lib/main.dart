@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
               )
           ),
           onGenerateRoute: onGenerate,
-          initialRoute: AppRoutes.splashPageRoute,
+          initialRoute: AppRoutes.profilePageRoute,
         ),
       );}
     );

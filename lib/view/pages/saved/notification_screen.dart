@@ -1,22 +1,18 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../utilities/app_string.dart';
 import '../../utilities/assets.dart';
 import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
-import '../../utilities/routes.dart';
 import '../../widgets/custom_widget/default_text.dart';
 
 class NotificationScreen extends StatelessWidget {
   const NotificationScreen({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0.0,
         centerTitle: true,
         backgroundColor: AppColor.white0,
         leading: IconButton(
@@ -36,14 +32,14 @@ class NotificationScreen extends StatelessWidget {
       //   child: Center(
       //     child: Column(
       //       children: [
-      //         SizedBox(height: 13.h,),
+      //         buildSizedBox(height: 13.h,),
       //         Image.asset(AppAssets.notification,height: 19.h,width: 43.25.w,),
-      //         SizedBox(height: 3.h,),
+      //         buildSizedBox(height: 3.h,),
       //         DefaultText(text:AppString.text1InNoNotification,fontSize: 16.5.sp,
       //           fontWeight: FontWeight.w500,
       //           color: AppColor.darkBlue,
       //         ),
-      //         SizedBox(height: 1.h,),
+      //         buildSizedBox(height: 1.h,),
       //         DefaultText(text:AppString.text2InNoNotification
       //           ,color: AppColor.grey1,height: 1.4,
       //         ),
@@ -58,12 +54,12 @@ class NotificationScreen extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 1.5.h,),
+          buildSizedBox(height: 1.5.h,),
           Padding(
             padding:  EdgeInsets.symmetric(horizontal: 6.w),
             child: DefaultText(text: AppString.newNotifi,color: AppColor.grey,fontSize:11.sp,),
           ),
-          SizedBox(height: 1.5.h,),
+          buildSizedBox(height: 1.5.h,),
           Container(
             height: 35.h,
             width: double.infinity,
@@ -74,16 +70,16 @@ class NotificationScreen extends StatelessWidget {
               Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height:3.h,),
+                    buildSizedBox(height:3.h,),
                     Image.asset(AppAssets.twitter,height: 5.5.h,width: 10.w,),
-                    SizedBox(width: 2.w,),
+                    buildSizedBox(width: 2.w,),
                     Column(
                       children: [
                         Row(children: [
                           DefaultText(text:AppString.dana,
                           color: AppColor.darkBlue,
                           fontSize:11.sp,),
-                          Spacer(),
+                          buildSpacer(),
                           CircleAvatar(radius: 8,),
                           DefaultText(text:AppString.postedNewJob
                             ,color: AppColor.grey1,),
@@ -101,12 +97,12 @@ class NotificationScreen extends StatelessWidget {
                 )
             ),
 
-          SizedBox(height: 2.h,),
+          buildSizedBox(height: 2.h,),
           Padding(
             padding:  EdgeInsets.symmetric(horizontal: 6.w),
             child: DefaultText(text: AppString.yesterday,color: AppColor.grey,fontSize:11.sp,),
           ),
-          SizedBox(height: 2.h,),
+          buildSizedBox(height: 2.h,),
           Expanded(
             child: Container(
               width: double.infinity,
@@ -116,16 +112,16 @@ class NotificationScreen extends StatelessWidget {
                   child:Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height:3.h,),
+                      buildSizedBox(height:3.h,),
                       Image.asset(AppAssets.twitter,height: 5.5.h,width: 10.w,),
-                      SizedBox(width: 2.w,),
+                      buildSizedBox(width: 2.w,),
                       Column(
                         children: [
                           Row(children: [
                             DefaultText(text:AppString.dana,
                               color: AppColor.darkBlue,
                               fontSize:11.sp,),
-                            Spacer(),
+                            buildSpacer(),
                             CircleAvatar(radius: 8,),
                             DefaultText(text:AppString.postedNewJob
                               ,color: AppColor.grey1,),

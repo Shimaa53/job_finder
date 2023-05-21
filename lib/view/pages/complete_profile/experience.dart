@@ -18,9 +18,7 @@ class Experience extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          elevation: 0.0,
           centerTitle: true,
-          backgroundColor: Colors.transparent,
           leading: IconButton(
             icon: AppIcons.back,
             color: AppColor.darkGrey,

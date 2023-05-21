@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../utilities/app_string.dart';
 import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
@@ -15,9 +15,7 @@ class ChangePassword extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0.0,
         centerTitle: true,
-        backgroundColor: Colors.transparent,
         leading: IconButton(
           icon: AppIcons.back,
           color: AppColor.darkGrey,
@@ -41,7 +39,7 @@ class ChangePassword extends StatelessWidget {
               fontWeight: FontWeight.w500,
               color: AppColor.darkBlue,
             ),
-            SizedBox(height: 2.h,),
+            buildSizedBox(height: 2.h,),
             DefaultFormField(
               prefixIcon:AppIcons.lock,
               hintText: AppString.password,
@@ -56,12 +54,12 @@ class ChangePassword extends StatelessWidget {
               },
 
             ),
-            SizedBox(height: 3.h,),
+            buildSizedBox(height: 3.h,),
             DefaultText(text:AppString.enterNewPassword,
               fontWeight: FontWeight.w500,
               color: AppColor.darkBlue,
             ),
-            SizedBox(height: 2.h,),
+            buildSizedBox(height: 2.h,),
             DefaultFormField(
               prefixIcon:AppIcons.lock,
               hintText: AppString.password,
@@ -76,12 +74,12 @@ class ChangePassword extends StatelessWidget {
               },
 
             ),
-            SizedBox(height: 3.h,),
+            buildSizedBox(height: 3.h,),
             DefaultText(text:AppString.confirmNewPassword,
               fontWeight: FontWeight.w500,
               color: AppColor.darkBlue,
             ),
-            SizedBox(height: 2.h,),
+            buildSizedBox(height: 2.h,),
             DefaultFormField(
               prefixIcon:AppIcons.lock,
               hintText: AppString.password,
@@ -96,7 +94,7 @@ class ChangePassword extends StatelessWidget {
               },
 
             ),
-            Spacer(),
+            buildSpacer(),
             MainButton(
                 text: AppString.save,
                 onTap: () {

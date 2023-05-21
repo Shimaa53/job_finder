@@ -7,6 +7,7 @@ import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
 import '../custom_widget/default_text.dart';
 import '../custom_widget/main_button.dart';
+
 Widget buildSuggestJob(SuggestJobModel buildSuggestJob) {
   return Container(
     height: 26.h,

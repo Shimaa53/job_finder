@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../../model/message_model.dart';
 import '../../utilities/color.dart';
 import '../../utilities/routes.dart';
 import '../custom_widget/default_text.dart';
+
 Widget buildMessage(MessageModel msg,BuildContext context)=>InkWell(
   onTap: (){
     Navigator.pushNamed(context, AppRoutes.chatPageRoute);
@@ -18,7 +19,7 @@ Widget buildMessage(MessageModel msg,BuildContext context)=>InkWell(
         radius: 27,
       ),
 
-      SizedBox(width: 2.w,),
+      buildSizedBox(width: 2.w,),
 
       Column(
 
@@ -56,7 +57,7 @@ Widget buildMessage(MessageModel msg,BuildContext context)=>InkWell(
 
           ),
 
-          SizedBox(height:1.5.h,),
+          buildSizedBox(height:1.5.h,),
 
           DefaultText(text:msg.contain
 

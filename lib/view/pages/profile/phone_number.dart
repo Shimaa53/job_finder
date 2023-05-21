@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../utilities/app_string.dart';
 import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
@@ -16,9 +15,7 @@ class PhoneNumber extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0.0,
         centerTitle: true,
-        backgroundColor: Colors.transparent,
         leading: IconButton(
           icon: AppIcons.back,
           color: AppColor.darkGrey,
@@ -42,11 +39,11 @@ class PhoneNumber extends StatelessWidget {
               fontWeight: FontWeight.w500,
               color: AppColor.darkBlue,
             ),
-            SizedBox(height: 2.h,),
+            buildSizedBox(height: 2.h,),
             DefaultFormField(
               keyboardType: TextInputType.phone,
             ),
-            SizedBox(height: 2.h,),
+            buildSizedBox(height: 2.h,),
 
             SwitchListTile(
           dense: true,

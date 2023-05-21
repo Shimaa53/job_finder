@@ -12,11 +12,11 @@ class CompleteProfile extends StatelessWidget {
    CompleteProfile({Key? key}) : super(key: key);
 List<String>title=[AppString.personalDetails,AppString.education,AppString.experience,AppString.portfolioP];
 List<String>details=[AppString.detailsPersonal,AppString.educationHistory,AppString.workExperience,AppString.createPortfolio];
-  @override
+
+@override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0.0,
         centerTitle: true,
         backgroundColor: AppColor.white0,
         leading: IconButton(

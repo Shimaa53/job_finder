@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../utilities/app_string.dart';
 import '../custom_widget/default_text.dart';
 import '../../utilities/color.dart';
@@ -11,6 +11,7 @@ List<String>typeOfWork=[
   AppString.FEDevelper
 
 ];
+
 Widget typeWork(int index)=>Container(
     height: 10.h,
     padding: EdgeInsets.symmetric(horizontal: 4.w,vertical: 0.8.h),
@@ -30,7 +31,7 @@ Widget typeWork(int index)=>Container(
               fontWeight: FontWeight.w500,
               fontSize: 10.5.sp,
             ),
-            SizedBox(height: 0.7.h,),
+            buildSizedBox(height: 0.7.h,),
             DefaultText(
               text: AppString.email,
               color: AppColor.grey2,
@@ -38,7 +39,7 @@ Widget typeWork(int index)=>Container(
 
           ],
         ),
-        Spacer(),
+        buildSpacer(),
         CircleAvatar(radius: 10,)
       ],
     )

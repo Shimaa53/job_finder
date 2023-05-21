@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../utilities/app_string.dart';
 import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
 import '../custom_widget/default_text.dart';
 
-Widget SaveSheet(BuildContext context)=>Container(
+Widget saveSheet(BuildContext context)=>Container(
     height:MediaQuery.of(context).size.height*.4,
     width: double.infinity,
     decoration: BoxDecoration(
@@ -27,18 +27,18 @@ Widget SaveSheet(BuildContext context)=>Container(
               child: Row(
                 children: [
                   AppIcons.applied,
-                  SizedBox(width: 3.w,),
+                  buildSizedBox(width: 3.w,),
                   DefaultText(text:AppString.applyJob,fontSize: 11.sp,
                     fontWeight: FontWeight.w500,
                     color: AppColor.darkBlue,
                   ),
-                  Spacer(),
+                  buildSpacer(),
                   AppIcons.forward,
                 ],
               ),
             ),
           ),
-          SizedBox(height: 1.5.h,),
+          buildSizedBox(height: 1.5.h,),
           InkWell(
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 4.w,vertical: 2.h),
@@ -49,18 +49,18 @@ Widget SaveSheet(BuildContext context)=>Container(
               child: Row(
                 children: [
                   AppIcons.share,
-                  SizedBox(width: 3.w,),
+                  buildSizedBox(width: 3.w,),
                   DefaultText(text:AppString.share,fontSize: 11.sp,
                     fontWeight: FontWeight.w500,
                     color: AppColor.darkBlue,
                   ),
-                  Spacer(),
+                  buildSpacer(),
                   AppIcons.forward,
                 ],
               ),
             ),
           ),
-          SizedBox(height: 1.5.h,),
+          buildSizedBox(height: 1.5.h,),
           InkWell(
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 4.w,vertical: 2.h),
@@ -71,12 +71,12 @@ Widget SaveSheet(BuildContext context)=>Container(
               child: Row(
                 children: [
                   AppIcons.saved,
-                  SizedBox(width: 3.w,),
+                  buildSizedBox(width: 3.w,),
                   DefaultText(text:AppString.cancelSave,fontSize: 11.sp,
                     fontWeight: FontWeight.w500,
                     color: AppColor.darkBlue,
                   ),
-                  Spacer(),
+                  buildSpacer(),
                   AppIcons.forward,
                 ],
               ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../../model/profile_model.dart';
 import '../../utilities/app_string.dart';
 import '../../utilities/assets.dart';
@@ -20,13 +20,11 @@ class ProfileScreen extends StatelessWidget {
 
 
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColor.babyBlue,
-        elevation: 0.0,
         leading:IconButton(
             onPressed: () {
               Navigator.pop(context);
@@ -70,15 +68,15 @@ class ProfileScreen extends StatelessWidget {
                padding:  EdgeInsets.symmetric(horizontal: 6.w),
                child: Column(
                children:[
-                 SizedBox(height: 6.5.h,),
+                 buildSizedBox(height: 6.5.h,),
                  DefaultText(text:AppString.myName,fontSize: 13.sp,
                       fontWeight: FontWeight.w500,
                       color: AppColor.darkBlue,
                     ),
-                    SizedBox(height: 0.95.h,),
+                    buildSizedBox(height: 0.95.h,),
                     DefaultText(text:AppString.sUiDesign
                       ,color: AppColor.grey1,),
-                    SizedBox(height: 3.h,),
+                    buildSizedBox(height: 3.h,),
                     Container(
                       height: 12.h,
                width: double.infinity,
@@ -95,7 +93,7 @@ class ProfileScreen extends StatelessWidget {
                      Column(
                        children: [
                          DefaultText(text: AppString.applied,color: AppColor.grey1,),
-                         SizedBox(height: 1.h,),
+                         buildSizedBox(height: 1.h,),
                          DefaultText(text:AppString.n46,
                            fontWeight: FontWeight.w500,
                            color: AppColor.darkBlue,
@@ -106,7 +104,7 @@ class ProfileScreen extends StatelessWidget {
                      Column(
                        children: [
                          DefaultText(text: AppString.reviewed,color: AppColor.grey1,),
-                         SizedBox(height: 1.h,),
+                         buildSizedBox(height: 1.h,),
                          DefaultText(text:AppString.n23,
                            fontWeight: FontWeight.w500,
                            color: AppColor.darkBlue,
@@ -117,7 +115,7 @@ class ProfileScreen extends StatelessWidget {
                      Column(
                        children: [
                          DefaultText(text: AppString.contacted,color: AppColor.grey1,),
-                         SizedBox(height: 1.h,),
+                         buildSizedBox(height: 1.h,),
                          DefaultText(text:AppString.n16,
                            fontWeight: FontWeight.w500,
                            color: AppColor.darkBlue,
@@ -130,20 +128,20 @@ class ProfileScreen extends StatelessWidget {
                    ],
                  ),
                ),
-                    SizedBox(height: 3.h,),
+                    buildSizedBox(height: 3.h,),
                  Row(
                    children: [
                      DefaultText(text:AppString.about
                        ,color: AppColor.grey1,
                      ),
-                     Spacer(),
+                     buildSpacer(),
                      DefaultText(text:AppString.edit
                        ,color: AppColor.blue,),
 
 
                    ],
                  ),
-                 SizedBox(height: 3.h,),
+                 buildSizedBox(height: 3.h,),
                  DefaultText(text:AppString.aboutMe
                    ,color: AppColor.grey1,
                    height: 1.4,
@@ -155,7 +153,7 @@ class ProfileScreen extends StatelessWidget {
                ],
                 ),
            ),
-           SizedBox(height: 2.h,),
+           buildSizedBox(height: 2.h,),
            Container(
              height: 5.h,
              width: double.infinity,
@@ -165,7 +163,7 @@ class ProfileScreen extends StatelessWidget {
                child: DefaultText(text: AppString.general,color: AppColor.grey,fontSize:11.sp,),
              ),
            ),
-           SizedBox(
+           buildSizedBox(
              height: 53.h,
              width: double.infinity,
              child: Padding(
@@ -191,7 +189,7 @@ class ProfileScreen extends StatelessWidget {
                        }
                      },
                        child: profile(ProfileModel.profile[index],context)),
-                   separatorBuilder: (context,index)=>Divider(),
+                   separatorBuilder: (context,index)=>buildDivider(),
                    itemCount: ProfileModel.profile.length
                )),
              ),
@@ -204,7 +202,7 @@ class ProfileScreen extends StatelessWidget {
                child: DefaultText(text: AppString.others,color: AppColor.grey,fontSize:11.sp,),
              ),
            ),
-           SizedBox(
+           buildSizedBox(
              height: 50.h,
              width: double.infinity,
              child: Padding(
@@ -225,7 +223,7 @@ class ProfileScreen extends StatelessWidget {
                             },
                        child: Column(
                          children: [
-                           SizedBox(height: 1.3.h,),
+                           buildSizedBox(height: 1.3.h,),
                            Row(
 
                              children: [
@@ -236,19 +234,19 @@ class ProfileScreen extends StatelessWidget {
 
                                ),
 
-                               Spacer(),
+                               buildSpacer(),
 
                                AppIcons.arrowForward
 
                              ],
 
                            ),
-                           SizedBox(height: 1.3.h,),
+                           buildSizedBox(height: 1.3.h,),
                          ],
                        ),
                      ),
 
-                     separatorBuilder: (context,index)=>Divider(),
+                     separatorBuilder: (context,index)=>buildDivider(),
                      itemCount: other.length
                  )),
            ),
