@@ -6,7 +6,6 @@ import '../../utilities/app_string.dart';
 import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../utilities/routes.dart';
 import '../../widgets/custom_widget/default_formfield.dart';
 import '../../widgets/custom_widget/default_text.dart';
@@ -22,12 +21,11 @@ class HomeScreen extends StatelessWidget {
     return
        SafeArea(
           child:Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 6.w),
+              padding:  EdgeInsets.only(left: 6.w,right: 6.w,top: 4.h),
               child:
               Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children:[
-                    buildSizedBox(height: 4.h,),
                     Row(
                       children:[
                         Column(
@@ -100,7 +98,7 @@ class HomeScreen extends StatelessWidget {
                     buildSizedBox(height: 1.1.h,),
                     Expanded(
                       child: ListView.separated(
-                          itemBuilder: (context, index) => BuildRecentJob(RecentJobModel.recent[index]),
+                          itemBuilder: (context, index) => buildRecentJob(RecentJobModel.recent[index]),
                           separatorBuilder:(context,index)=> buildDivider(),
                           itemCount: RecentJobModel.recent.length),
                     )

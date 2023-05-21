@@ -1,20 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
-import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
-import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
-import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
-import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
-import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
-import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../../model/recent_job.dart';
 import '../../utilities/app_string.dart';
 import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
 import '../custom_widget/default_text.dart';
 
-Widget BuildRecentJob(RecentJobModel buildRecentJob)=>
+Widget buildRecentJob(RecentJobModel buildRecentJob)=>
     Column(
       children: [
         Row(
@@ -43,7 +36,9 @@ Widget BuildRecentJob(RecentJobModel buildRecentJob)=>
                 ]
             ),
             buildSpacer(),
-            IconButton(onPressed: (){}, icon: AppIcons.saved,color:  AppColor.darkBlue,iconSize: 30,)
+            IconButton(onPressed: (){
+
+            }, icon: AppIcons.saved,color:  AppColor.darkBlue,iconSize: 30,)
           ],
         ),
         buildSizedBox(height:2.5.h,),

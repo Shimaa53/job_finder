@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +8,6 @@ import '../../../view/pages/messages/message_screen.dart';
 import '../../../view/pages/profile/profile_screen.dart';
 import '../../../view/pages/saved/saved_screen.dart';
 import '../../../view/utilities/app_string.dart';
-import '../../../view/utilities/color.dart';
 import '../../../view/utilities/icon.dart';
 
 part 'job_state.dart';
@@ -112,6 +110,16 @@ void CheckBox(newValue){
   isChecked=newValue;
   emit(CheckBoxRemember());
 }
+
+//Saved Jobs
+//Map<int,bool> save={};
+//   Icon icon=AppIcons.eyeOff;
+//   bool obScure=true;
+//   void isSaved() {
+//     obScure=!obScure;
+//     icon=obScure?AppIcons.eyeOff:AppIcons.eye;
+//     emit(ChangeVisibility());
+//   }
 
 //   //ChangeColorButton
 //   Color color=AppColor.white;
