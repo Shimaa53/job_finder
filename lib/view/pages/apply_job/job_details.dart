@@ -1,13 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
-import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
-import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
-import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
-import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
-import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
-import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
-import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
-import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
 import '../../utilities/app_string.dart';
 import '../../utilities/assets.dart';

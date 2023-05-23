@@ -5,12 +5,16 @@ import 'package:job_finder/view/utilities/color.dart';
 import 'package:job_finder/view/utilities/router.dart';
 import 'package:job_finder/view/utilities/routes.dart';
 import 'package:sizer/sizer.dart';
+import 'controller/bloc_observer.dart';
 import 'controller/cubit/bottom/job_cubit.dart';
 import 'controller/data/local/shared.dart';
+import 'controller/data/remote/data_helper/dio_helper.dart';
 
 void main()async {
   WidgetsFlutterBinding.ensureInitialized();
   await MyCache.init();
+  DataHelper.init();
+  Bloc.observer = MyBlocObserver();
 
   runApp(const MyApp());
 }

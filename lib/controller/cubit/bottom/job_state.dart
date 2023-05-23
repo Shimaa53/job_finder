@@ -8,3 +8,4 @@ class ChangeBottomNavigation extends JobState {}
 class ChangeSwitch extends JobState {}
 class ChangeVisibility extends JobState {}
 class CheckBoxRemember extends JobState {}
+
