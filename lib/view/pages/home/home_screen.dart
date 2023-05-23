@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/controller/cubit/bottom/job_cubit.dart';
 import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import '../../../model/recent_job.dart';
 import '../../../model/suggest_job.dart';
@@ -23,87 +24,90 @@ class HomeScreen extends StatelessWidget {
           child:Padding(
               padding:  EdgeInsets.only(left: 6.w,right: 6.w,top: 4.h),
               child:
-              Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children:[
-                    Row(
-                      children:[
-                        Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children:[
+               Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children:[
+                      Row(
+                        children:[
+                          Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children:[
 
-                              DefaultText(text: AppString.text1InHome,fontSize: 19.sp,fontWeight: FontWeight.w500,color:  AppColor.darkBlue),
-                              buildSizedBox(height: 1.1.h,),
-                              DefaultText(text:AppString.text2InHome,)
-                            ]
-                        ),
-                        buildSpacer(),
-                        CircleAvatar(
-                            radius: 23,
-                            backgroundColor: AppColor.white,
-                            child: CircleAvatar(
-                              radius: 22,
-                              backgroundColor: AppColor.white1,
-                              child: AppIcons.notification,
-                              foregroundColor: AppColor.darkGrey,
-                            )
-                        ),
+                                DefaultText(text: AppString.text1InHome,fontSize: 19.sp,fontWeight: FontWeight.w500,color:  AppColor.darkBlue),
+                                buildSizedBox(height: 1.1.h,),
+                                DefaultText(text:AppString.text2InHome,)
+                              ]
+                          ),
+                          buildSpacer(),
+                          CircleAvatar(
+                              radius: 23,
+                              backgroundColor: AppColor.white,
+                              child: CircleAvatar(
+                                radius: 22,
+                                backgroundColor: AppColor.white1,
+                                child: AppIcons.notification,
+                                foregroundColor: AppColor.darkGrey,
+                              )
+                          ),
 
-                      ],
-                    ),
-                    buildSizedBox(height: 3.5.h,),
-                    DefaultFormField(
-                      controller: searchController,
-                      prefixIcon:AppIcons.search,
-                      hintText: AppString.search,
-                      radius: 90,
-                      isDense: true,
-                      onTap: (){
-                        Navigator.pushNamed(context, AppRoutes.searchPageRoute,);
-                      },
+                        ],
+                      ),
+                      buildSizedBox(height: 3.5.h,),
+                      DefaultFormField(
+                        controller: searchController,
+                        prefixIcon:AppIcons.search,
+                        hintText: AppString.search,
+                        radius: 90,
+                        isDense: true,
+                        onTap: (){
+                          Navigator.pushNamed(context, AppRoutes.searchPageRoute,);
+                        },
 
-                    ),
-                    buildSizedBox(height: 1.1.h,),
-                    Row(
-                      children: [
-                        DefaultText(text:AppString.suggestJob,fontSize: 12.5.sp,fontWeight: FontWeight.w500,color: AppColor.darkBlue,),
-                        buildSpacer(),
-                        TextButton(
-                            onPressed: (){},
-                            child: DefaultText(
-                              text:AppString.viewAll,color: AppColor.blue,
-                            ))
-                      ],
-                    ),
-                    buildSizedBox(height: 1.1.h,),
-                    Expanded(
-                      child: ListView.separated(
-                          scrollDirection: Axis.horizontal,
-                          itemBuilder: (context, index) => buildSuggestJob(SuggestJobModel.suggest[index]),
-                          separatorBuilder:(context,index) =>buildSizedBox(width: 4.w,),
-                          itemCount: SuggestJobModel.suggest.length),
-                    ),
-                    buildSizedBox(height: 1.1.h,),
-                    Row(
-                      children: [
-                        DefaultText(text:AppString.recentJob,fontSize: 12.5.sp,fontWeight: FontWeight.w500,color: AppColor.darkBlue,),
-                        buildSpacer(),
-                        TextButton(
-                            onPressed: (){},
-                            child: DefaultText(
-                              text:AppString.viewAll,color: AppColor.blue,
-                            ))
-                      ],
-                    ),
-                    buildSizedBox(height: 1.1.h,),
-                    Expanded(
-                      child: ListView.separated(
-                          itemBuilder: (context, index) => buildRecentJob(RecentJobModel.recent[index]),
-                          separatorBuilder:(context,index)=> buildDivider(),
-                          itemCount: RecentJobModel.recent.length),
-                    )
-                  ]
-              ))
+                      ),
+                      buildSizedBox(height: 1.1.h,),
+                      Row(
+                        children: [
+                          DefaultText(text:AppString.suggestJob,fontSize: 12.5.sp,fontWeight: FontWeight.w500,color: AppColor.darkBlue,),
+                          buildSpacer(),
+                          TextButton(
+                              onPressed: (){},
+                              child: DefaultText(
+                                text:AppString.viewAll,color: AppColor.blue,
+                              ))
+                        ],
+                      ),
+                      buildSizedBox(height: 1.1.h,),
+                      Expanded(
+                        child: ListView.separated(
+                            scrollDirection: Axis.horizontal,
+                            //SuggestJobModel.suggest[index]
+                            itemBuilder: (context, index) => buildSuggestJob(SuggestJobModel.suggest[index]),
+                            separatorBuilder:(context,index) =>buildSizedBox(width: 4.w,),
+                            itemCount: SuggestJobModel.suggest.length),
+                      ),
+                      buildSizedBox(height: 1.1.h,),
+                      Row(
+                        children: [
+                          DefaultText(text:AppString.recentJob,fontSize: 12.5.sp,fontWeight: FontWeight.w500,color: AppColor.darkBlue,),
+                          buildSpacer(),
+                          TextButton(
+                              onPressed: (){},
+                              child: DefaultText(
+                                text:AppString.viewAll,color: AppColor.blue,
+                              ))
+                        ],
+                      ),
+                      buildSizedBox(height: 1.1.h,),
+                       Expanded(
+                         child: ListView.separated(
+                              itemBuilder: (context, index) => buildRecentJob(RecentJobModel.recent[index],context),
+                              separatorBuilder:(context,index)=> buildDivider(),
+                              itemCount: RecentJobModel.recent.length),
+                       ),
+
+                    ]
+                ),
+              )
 
 
     );

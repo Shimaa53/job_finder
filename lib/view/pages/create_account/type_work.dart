@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:job_finder/view/utilities/assets.dart';
-import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
-import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
-import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
 import '../../../model/type_work_model.dart';
@@ -20,40 +16,38 @@ class TypeWork extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body:SafeArea(
-          child: SingleChildScrollView(
-            child: Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 6.w,vertical: 4.h),
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children:[
-                    DefaultText(text: AppString.text1InTypeWork,fontSize: 19.sp,fontWeight: FontWeight.w500,color:  AppColor.darkBlue,),
-                    buildSizedBox(height: 1.1.h,),
-                    DefaultText(text:AppString.text2InTypeWork,fontSize: 11.sp,
-                      color: AppColor.grey,
+          child: Padding(
+            padding:  EdgeInsets.symmetric(horizontal: 6.w,vertical: 4.h),
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children:[
+                  DefaultText(text: AppString.text1InTypeWork,fontSize: 19.sp,fontWeight: FontWeight.w500,color:  AppColor.darkBlue,),
+                  buildSizedBox(height: 1.1.h,),
+                  DefaultText(text:AppString.text2InTypeWork,fontSize: 11.sp,
+                    color: AppColor.grey,
+                  ),
+                  buildSizedBox(height: 4.h,),
+                  Expanded(
+                    child: GridView.builder(
+                        physics: NeverScrollableScrollPhysics(),
+                        gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                          crossAxisSpacing: 15,
+                          mainAxisSpacing: 20,
+                        ),
+                        itemBuilder:(context, index) =>workTypeItem(TypeWorkModel.type[index]),
+                      itemCount: TypeWorkModel.type.length,
                     ),
-                    buildSizedBox(height: 4.h,),
-                    Expanded(
-                      child: GridView.builder(
-                          physics: NeverScrollableScrollPhysics(),
-                          gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 2,
-                            crossAxisSpacing: 15,
-                            mainAxisSpacing: 20,
-                          ),
-                          itemBuilder:(context, index) =>workTypeItem(TypeWorkModel.type[index]),
-                        itemCount: TypeWorkModel.type.length,
-                      ),
-                    ),
-                    MainButton(
-                      text: AppString.next ,
-                      onTap: (){
-                        Navigator.pushNamed(context, AppRoutes.locationPageRoute);
-                      },
-                      colorBox: AppColor.blue,),
+                  ),
+                  MainButton(
+                    text: AppString.next ,
+                    onTap: (){
+                      Navigator.pushNamed(context, AppRoutes.locationPageRoute);
+                    },
+                    colorBox: AppColor.blue,),
 
 
-                  ]
-              ),
+                ]
             ),
           ),
         )

@@ -1,4 +1,3 @@
-import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:job_finder/controller/data/remote/data_helper/dio_helper.dart';
@@ -17,7 +16,7 @@ class JobLoginCubit extends Cubit<JobLoginState> {
 })
   {
     emit(JobLoginLoading());
-    DataHelper.postData(url: endPoint,
+    DataHelper.postData(url: endPointLogin,
         data: {
           "email":email,
           "password":password

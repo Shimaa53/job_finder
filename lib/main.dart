@@ -15,7 +15,6 @@ void main()async {
   await MyCache.init();
   DataHelper.init();
   Bloc.observer = MyBlocObserver();
-
   runApp(const MyApp());
 }
 

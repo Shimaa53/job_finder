@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:job_finder/controller/data/remote/data_helper/dio_helper.dart';
+import 'package:job_finder/controller/data/remote/data_helper/end_point.dart';
+import '../../../model/job_model/home_model.dart';
 import '../../../view/pages/apply_job/job_apply.dart';
 import '../../../view/pages/home/home_screen.dart';
 import '../../../view/pages/messages/message_screen.dart';
@@ -38,6 +41,23 @@ class JobCubit extends Cubit<JobState> {
     currentIndex=index;
     emit(ChangeBottomNavigation());
   }
+
+  late HomeModel suggestModel;
+  void getSuggestData(){
+    DataHelper.getData(url: endPointSuggest)
+        .then((value) {
+          suggestModel=HomeModel.fromJson(value.data);
+          print(suggestModel.data![0].name);
+          emit(SuggestJobSuccess());
+    }).catchError((e){
+      print(e.toString());
+      emit(SuggestJobError());
+
+    }
+    );
+  }
+
+
 
   //
   static List<String>recentSearch=[

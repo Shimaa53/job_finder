@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder/controller/cubit/bottom/job_cubit.dart';
 import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
 import 'package:sizer/sizer.dart';
 import '../../../model/recent_job.dart';
@@ -7,7 +8,7 @@ import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
 import '../custom_widget/default_text.dart';
 
-Widget buildRecentJob(RecentJobModel buildRecentJob)=>
+Widget buildRecentJob(RecentJobModel buildRecentJob,BuildContext context)=>
     Column(
       children: [
         Row(
@@ -37,7 +38,7 @@ Widget buildRecentJob(RecentJobModel buildRecentJob)=>
             ),
             buildSpacer(),
             IconButton(onPressed: (){
-
+              JobCubit.get(context).getSuggestData();
             }, icon: AppIcons.saved,color:  AppColor.darkBlue,iconSize: 30,)
           ],
         ),
