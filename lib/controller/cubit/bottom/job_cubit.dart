@@ -1,8 +1,10 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:job_finder/controller/data/remote/data_helper/dio_helper.dart';
 import 'package:job_finder/controller/data/remote/data_helper/end_point.dart';
-import '../../../model/job_model/home_model.dart';
+import 'package:job_finder/model/job_model/recent_model.dart';
+import '../../../model/job_model/suggest_model.dart';
 import '../../../view/pages/apply_job/job_apply.dart';
 import '../../../view/pages/home/home_screen.dart';
 import '../../../view/pages/messages/message_screen.dart';
@@ -10,12 +12,12 @@ import '../../../view/pages/profile/profile_screen.dart';
 import '../../../view/pages/saved/saved_screen.dart';
 import '../../../view/utilities/app_string.dart';
 import '../../../view/utilities/icon.dart';
-
 part 'job_state.dart';
 
 class JobCubit extends Cubit<JobState> {
   JobCubit() : super(JobInitial());
   static JobCubit get(context)=>BlocProvider.of(context);
+
 
   int currentIndex=0;
 
@@ -41,25 +43,55 @@ class JobCubit extends Cubit<JobState> {
     currentIndex=index;
     emit(ChangeBottomNavigation());
   }
+  List <HomeModel> home=[];
+  Future getSuggestData()async{
+    try{
+      Response response =await DataHelper.getData(
+          url: endPointSuggest+'15',
+          token:'1170|ZYaWGZg83eCi4tTQGxbMyOJqDIDp5G64CfVDMhXM'
+      );
+      response.data['data'].forEach((e){
 
-  late HomeModel suggestModel;
-  void getSuggestData(){
-    DataHelper.getData(url: endPointSuggest)
-        .then((value) {
-          suggestModel=HomeModel.fromJson(value.data);
-          print(suggestModel.data![0].name);
-          emit(SuggestJobSuccess());
-    }).catchError((e){
-      print(e.toString());
+        home.add(HomeModel.fromJson(e));
+
+      });
+      print(response.data['data']);
+      print(home);
+      emit(SuggestJobSuccess());
+    } catch(e){
+      print(e);
       emit(SuggestJobError());
-
     }
-    );
+  }
+
+  List <JobsModel> jobs=[];
+  Future getRecentData()async{
+    try{
+      Response response =await DataHelper.getData(
+          url: endPointJobs,
+          token:'1170|ZYaWGZg83eCi4tTQGxbMyOJqDIDp5G64CfVDMhXM'
+
+      );
+      response.data['data'].forEach((e){
+
+        jobs.add(JobsModel.fromJson(e));
+
+      });
+      print(response.data['data']);
+      print(jobs);
+      emit(RecentJobSuccess());
+    } catch(e){
+      print(e);
+      emit(RecentJobError());
+    }
   }
 
 
 
-  //
+
+
+
+
   static List<String>recentSearch=[
     AppString.juniorUiDesign,
     AppString.juniorUxDesign,

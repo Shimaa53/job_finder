@@ -1,6 +1,8 @@
+
 class AppString{
 
   static const String skip ="Skip";
+  //static  String token =" ";
   static const String next ="Next";
   static const String start ="Get Started";
   static const String boarding1Information1 ="Find a job, and ";
@@ -90,7 +92,6 @@ class AppString{
   static const String suggestJob ='Suggested Job';
   static const String viewAll ='View all';
   static const String recentJob ='Recent Job';
-  static const String productDesigner ='Product Designer';
   static const String zoom ='Zoom';
   static const String dot ='•';
   static const String fullTime ='Fulltime';
@@ -99,7 +100,6 @@ class AppString{
   static const String p12 ='12';
   static const String dollar ='\$';
   static const String thousand ='K';
-  static const String minus ='-';
   static const String p15 ='15';
   static const String month ='/Month';
   static const String applyNow ='Apply now';

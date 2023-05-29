@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:job_finder/controller/cubit/bottom/job_cubit.dart';
 import 'package:job_finder/view/widgets/custom_widget/build_custom_widget.dart';
-import '../../../model/recent_job.dart';
-import '../../../model/suggest_job.dart';
 import '../../utilities/app_string.dart';
 import '../../utilities/color.dart';
 import '../../utilities/icon.dart';
@@ -62,6 +61,9 @@ class HomeScreen extends StatelessWidget {
                         onTap: (){
                           Navigator.pushNamed(context, AppRoutes.searchPageRoute,);
                         },
+                        onChanged: (data){
+                          print(data);
+                        },
 
                       ),
                       buildSizedBox(height: 1.1.h,),
@@ -78,13 +80,17 @@ class HomeScreen extends StatelessWidget {
                       ),
                       buildSizedBox(height: 1.1.h,),
                       Expanded(
-                        child: ListView.separated(
-                            scrollDirection: Axis.horizontal,
-                            //SuggestJobModel.suggest[index]
-                            itemBuilder: (context, index) => buildSuggestJob(SuggestJobModel.suggest[index]),
-                            separatorBuilder:(context,index) =>buildSizedBox(width: 4.w,),
-                            itemCount: SuggestJobModel.suggest.length),
-                      ),
+                        child: BlocBuilder<JobCubit,JobState>(
+                          builder: (context,state){
+                          return ListView.separated(
+                              scrollDirection: Axis.horizontal,
+                              itemBuilder: (context, index) => buildSuggestJob(JobCubit.get(context).home[index]),
+                              separatorBuilder:(context,index) =>buildSizedBox(width: 4.w,),
+                              itemCount:JobCubit.get(context).home.length
+                          );}
+
+     )
+                       ),
                       buildSizedBox(height: 1.1.h,),
                       Row(
                         children: [
@@ -98,12 +104,15 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
                       buildSizedBox(height: 1.1.h,),
-                       Expanded(
-                         child: ListView.separated(
-                              itemBuilder: (context, index) => buildRecentJob(RecentJobModel.recent[index],context),
+                      Expanded(
+                        child: BlocBuilder<JobCubit,JobState>(
+                               builder: (context,state){
+                               return ListView.separated(
+                              itemBuilder: (context, index) => buildRecentJob(JobCubit.get(context).jobs[index]),
                               separatorBuilder:(context,index)=> buildDivider(),
-                              itemCount: RecentJobModel.recent.length),
-                       ),
+                              itemCount:JobCubit.get(context).jobs.length);
+                        })
+                      )
 
                     ]
                 ),

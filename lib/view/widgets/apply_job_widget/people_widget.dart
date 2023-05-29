@@ -51,43 +51,6 @@ Widget people()=>Column(
         ]
     ),
     buildSizedBox(height: 3.h,),
-    Row(
-      children: [
-        Image.asset(AppAssets.photo1,height: 5.h,width: 9.5.w,),
-        buildSizedBox(width: 2.w,),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            DefaultText(
-              text: AppString.name1,
-              color: AppColor.darkBlue,
-              fontWeight: FontWeight.w500,
-              fontSize: 10.5.sp,
-            ),
-            buildSizedBox(height: 1.h,),
-            DefaultText(
-              text:'${AppString.sUiDesign} at ${AppString.twitter}',
-              color: AppColor.grey2,
-            ),
-          ],
-        ),
-        buildSpacer(),
-        Column(
-          children: [
-            DefaultText(
-              text: AppString.workDuring,
-              color: AppColor.grey2,
-            ),
-            buildSizedBox(height: 1.h,),
-            DefaultText(
-              text: AppString.year5,
-              color: AppColor.blue,
-            ),
-          ],
-        ),
-
-      ],
-    ),
     Expanded(
       child: ListView.separated(
           itemBuilder: (context, index) =>employee(EmployeeModel.emp[index]) ,

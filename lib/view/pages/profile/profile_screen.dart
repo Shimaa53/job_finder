@@ -169,6 +169,8 @@ class ProfileScreen extends StatelessWidget {
              child: Padding(
                padding:  EdgeInsets.symmetric(horizontal: 6.w,vertical: 1.h),
                child: ListView.separated(
+                 shrinkWrap: true,
+                 physics: NeverScrollableScrollPhysics(),
                    itemBuilder: (context, index) => InkWell(
                      onTap: (){
                        if(index==0){
@@ -208,6 +210,8 @@ class ProfileScreen extends StatelessWidget {
              child: Padding(
                  padding:  EdgeInsets.symmetric(horizontal: 6.w,vertical: 1.h),
                  child: ListView.separated(
+                   shrinkWrap: true,
+                     physics: NeverScrollableScrollPhysics(),
                      itemBuilder: (context, index) =>InkWell(
                        onTap: (){
                          if (index == 1) {

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:job_finder/view/utilities/app_string.dart';
 import 'package:job_finder/view/utilities/color.dart';
+import 'package:job_finder/view/utilities/enums.dart';
 import 'package:job_finder/view/utilities/router.dart';
 import 'package:job_finder/view/utilities/routes.dart';
 import 'package:sizer/sizer.dart';
@@ -15,6 +17,7 @@ void main()async {
   await MyCache.init();
   DataHelper.init();
   Bloc.observer = MyBlocObserver();
+  //AppString.token=MyCache.getString(key: MyCacheKeys.token);
   runApp(const MyApp());
 }
 
@@ -26,7 +29,7 @@ class MyApp extends StatelessWidget {
     return Sizer(
       builder: (BuildContext context, Orientation orientation, DeviceType deviceType) {
       return BlocProvider(
-        create: (BuildContext context)=>JobCubit(),
+        create: (BuildContext context)=>JobCubit()..getSuggestData()..getRecentData(),
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(

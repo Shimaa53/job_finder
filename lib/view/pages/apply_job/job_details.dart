@@ -199,7 +199,6 @@ int currentIndex=0;
               ),
             ),
 
-             buildSpacer(),
             MainButton(
                 text: AppString.applyNow,
                 onTap: () {

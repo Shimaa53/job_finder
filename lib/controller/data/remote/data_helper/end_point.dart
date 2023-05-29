@@ -1,3 +1,4 @@
-const String baseUrl='http://164.92.246.77/api';
+const String baseUrl='http://167.71.79.133/api';
  String endPointLogin='/auth/login';
- String endPointSuggest='/jobs/sugest/2';
+ String endPointSuggest='/jobs/sugest/';
+ String endPointJobs='/jobs';
