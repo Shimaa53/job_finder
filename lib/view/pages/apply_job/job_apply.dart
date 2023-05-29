@@ -29,7 +29,9 @@ class ApplyJob extends StatelessWidget {
         leading: IconButton(
           icon: AppIcons.back,
           color: AppColor.darkGrey,
-          onPressed: () {  },),
+          onPressed: () {
+            Navigator.pop(context);
+          },),
         title: DefaultText(
           text:AppString.applyJob,
           fontSize: 14.sp,

@@ -14,7 +14,23 @@ import '../../widgets/custom_widget/main_button.dart';
 
 
 class JobDetails extends StatefulWidget {
-   const JobDetails({Key? key}) : super(key: key);
+  // final String img;
+  // final String jobType;
+  // final String typeApp;
+  // final String place;
+  // final String timeType;
+  // final String type;
+  // final String levelType;
+  //
+  //  JobDetails(
+  //     {
+  //     required this.img,
+  //     required this.jobType,
+  //     required this.typeApp,
+  //     required this.place,
+  //     required this.timeType,
+  //     required this.type,
+  //     required this.levelType});
 
   @override
   State<JobDetails> createState() => _JobDetailsState();
@@ -31,7 +47,9 @@ int currentIndex=0;
           leading: IconButton(
               icon: AppIcons.back,
             color: AppColor.darkGrey,
-            onPressed: () {  },),
+            onPressed: () {
+                Navigator.pop(context);
+            },),
           title: DefaultText(
             text:AppString.jobDetails,
             fontSize: 14.sp,
@@ -49,7 +67,7 @@ int currentIndex=0;
             padding: EdgeInsets.symmetric(horizontal: 6.w,vertical: 4.h),
             child:Column(
           children: [
-            Image.asset(AppAssets.twitter,height: 6.5.h,width: 12.w,),
+            Image.asset(AppAssets.slackLogo,height: 6.5.h,width: 12.w,),
             buildSizedBox(height: 1.h,),
             DefaultText(text:AppString.sUiDesign,fontSize: 13.sp,
               fontWeight: FontWeight.w500,
@@ -59,7 +77,7 @@ int currentIndex=0;
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                DefaultText(text:AppString.twitter
+                DefaultText(text:AppString.slack
                   ,color: AppColor.grey1,),
                 buildSizedBox(width: 0.7.w,),
                 CircleAvatar(backgroundColor: AppColor.grey1,minRadius: 2,),

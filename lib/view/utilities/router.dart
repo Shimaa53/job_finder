@@ -9,6 +9,7 @@ import 'package:job_finder/view/pages/profile/phone_number.dart';
 import 'package:job_finder/view/pages/profile/terms.dart';
 import 'package:job_finder/view/pages/profile/verification.dart';
 import 'package:job_finder/view/utilities/routes.dart';
+import '../../model/job_model/recent_model.dart';
 import '../pages/apply_job/job_apply.dart';
 import '../pages/apply_job/job_details.dart';
 import '../pages/boarding/boarding_screen.dart';
@@ -120,10 +121,10 @@ case AppRoutes.selectJobPageRoute:
         settings: routeSettings,
       );
 
-
 case AppRoutes.jobDetailsPageRoute:
       return MaterialPageRoute(
-        builder: (_) =>  JobDetails(),
+        builder: (_) =>  JobDetails(
+        ),
         settings: routeSettings,
       );
 

@@ -108,11 +108,15 @@ class SearchScreen extends StatelessWidget {
                      crossAxisAlignment: CrossAxisAlignment.start,
                      children: [
                        buildSizedBox(height: 1.5.h,),
-                       AppIcons.time,
+                       AppIcons.search,
                        buildSizedBox(width: 2.w,),
                        InkWell(child: DefaultText(text:JobCubit.popularSearch[index],color: AppColor.darkBlue,fontSize:11.sp,)),
                        buildSpacer(),
-                       IconButton(onPressed: (){}, icon: AppIcons.cancel,color: AppColor.danger,)
+                       IconButton(
+                         onPressed: (){},
+                         icon: AppIcons.arrowForward,
+                         color: AppColor.blue,
+                         )
                      ],
                    ),
                      itemCount: JobCubit.popularSearch.length,

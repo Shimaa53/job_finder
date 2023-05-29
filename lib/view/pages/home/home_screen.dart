@@ -66,32 +66,39 @@ class HomeScreen extends StatelessWidget {
                         },
 
                       ),
+
                       buildSizedBox(height: 1.1.h,),
-                      Row(
+                      JobCubit.get(context).home.isEmpty?SizedBox.shrink():
+                      Column(
                         children: [
-                          DefaultText(text:AppString.suggestJob,fontSize: 12.5.sp,fontWeight: FontWeight.w500,color: AppColor.darkBlue,),
-                          buildSpacer(),
-                          TextButton(
-                              onPressed: (){},
-                              child: DefaultText(
-                                text:AppString.viewAll,color: AppColor.blue,
-                              ))
+                          Row(
+                            children: [
+                              DefaultText(text:AppString.suggestJob,fontSize: 12.5.sp,fontWeight: FontWeight.w500,color: AppColor.darkBlue,),
+                              buildSpacer(),
+                              TextButton(
+                                  onPressed: (){},
+                                  child: DefaultText(
+                                    text:AppString.viewAll,color: AppColor.blue,
+                                  ))
+                            ],
+                          ),
+                          buildSizedBox(height: 1.1.h,),
+                          Expanded(
+                              child: BlocBuilder<JobCubit,JobState>(
+                                  builder: (context,state){
+                                    return ListView.separated(
+                                        scrollDirection: Axis.horizontal,
+                                        itemBuilder: (context, index) =>
+                                            buildSuggestJob(JobCubit.get(context).home[index]),
+                                        separatorBuilder:(context,index) =>buildSizedBox(width: 4.w,),
+                                        itemCount:JobCubit.get(context).home.length
+                                    );}
+
+                              )
+                          ),
+                          buildSizedBox(height: 1.1.h,),
                         ],
                       ),
-                      buildSizedBox(height: 1.1.h,),
-                      Expanded(
-                        child: BlocBuilder<JobCubit,JobState>(
-                          builder: (context,state){
-                          return ListView.separated(
-                              scrollDirection: Axis.horizontal,
-                              itemBuilder: (context, index) => buildSuggestJob(JobCubit.get(context).home[index]),
-                              separatorBuilder:(context,index) =>buildSizedBox(width: 4.w,),
-                              itemCount:JobCubit.get(context).home.length
-                          );}
-
-     )
-                       ),
-                      buildSizedBox(height: 1.1.h,),
                       Row(
                         children: [
                           DefaultText(text:AppString.recentJob,fontSize: 12.5.sp,fontWeight: FontWeight.w500,color: AppColor.darkBlue,),
@@ -103,12 +110,11 @@ class HomeScreen extends StatelessWidget {
                               ))
                         ],
                       ),
-                      buildSizedBox(height: 1.1.h,),
                       Expanded(
                         child: BlocBuilder<JobCubit,JobState>(
                                builder: (context,state){
                                return ListView.separated(
-                              itemBuilder: (context, index) => buildRecentJob(JobCubit.get(context).jobs[index]),
+                              itemBuilder: (context, index) => buildRecentJob(JobCubit.get(context).jobs[index],context),
                               separatorBuilder:(context,index)=> buildDivider(),
                               itemCount:JobCubit.get(context).jobs.length);
                         })
